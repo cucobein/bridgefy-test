@@ -34,6 +34,31 @@
 		FD3B6DD3260F01A6009BCD1B /* UIFont+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DD2260F01A6009BCD1B /* UIFont+Helpers.swift */; };
 		FD3B6DD7260F01C4009BCD1B /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DD6260F01C4009BCD1B /* Data+Helpers.swift */; };
 		FD3B6DDA260F0201009BCD1B /* Error+Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DD9260F0201009BCD1B /* Error+Code.swift */; };
+		FD3B6DE8260FEC26009BCD1B /* Animosa-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6DE3260FEC26009BCD1B /* Animosa-ExtraBold.ttf */; };
+		FD3B6DE9260FEC26009BCD1B /* Animosa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6DE4260FEC26009BCD1B /* Animosa-Regular.ttf */; };
+		FD3B6DEA260FEC26009BCD1B /* Animosa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6DE5260FEC26009BCD1B /* Animosa-Light.ttf */; };
+		FD3B6DEB260FEC26009BCD1B /* Animosa-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6DE6260FEC26009BCD1B /* Animosa-ExtraLight.ttf */; };
+		FD3B6DEC260FEC26009BCD1B /* Animosa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6DE7260FEC26009BCD1B /* Animosa-Bold.ttf */; };
+		FD3B6DEF260FECDA009BCD1B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DEE260FECDA009BCD1B /* LoginViewController.swift */; };
+		FD3B6DF2260FECE9009BCD1B /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DF1260FECE9009BCD1B /* LoginBuilder.swift */; };
+		FD3B6DF6260FECFC009BCD1B /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DF5260FECFC009BCD1B /* LoginRouter.swift */; };
+		FD3B6DFA260FED13009BCD1B /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6DF9260FED13009BCD1B /* LoginViewController.storyboard */; };
+		FD3B6DFE260FED37009BCD1B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DFD260FED37009BCD1B /* LoginViewModel.swift */; };
+		FD3B6E0126100F9E009BCD1B /* CountriesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E0026100F9E009BCD1B /* CountriesBuilder.swift */; };
+		FD3B6E0426100FA6009BCD1B /* CountriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E0326100FA6009BCD1B /* CountriesRouter.swift */; };
+		FD3B6E0726100FB5009BCD1B /* CountriesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6E0626100FB5009BCD1B /* CountriesViewController.storyboard */; };
+		FD3B6E0A26100FC1009BCD1B /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E0926100FC1009BCD1B /* CountriesViewController.swift */; };
+		FD3B6E0D26100FCD009BCD1B /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E0C26100FCD009BCD1B /* CountriesViewModel.swift */; };
+		FD3B6E1126101120009BCD1B /* CountryDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E1026101120009BCD1B /* CountryDetailBuilder.swift */; };
+		FD3B6E142610112D009BCD1B /* CountryDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E132610112D009BCD1B /* CountryDetailRouter.swift */; };
+		FD3B6E1726101143009BCD1B /* CountryDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6E1626101143009BCD1B /* CountryDetailViewController.storyboard */; };
+		FD3B6E1A26101156009BCD1B /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E1926101156009BCD1B /* CountryDetailViewController.swift */; };
+		FD3B6E1D26101367009BCD1B /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E1C26101367009BCD1B /* CountryDetailViewModel.swift */; };
+		FD3B6E2026101633009BCD1B /* DevicesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E1F26101633009BCD1B /* DevicesBuilder.swift */; };
+		FD3B6E232610163C009BCD1B /* DevicesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E222610163C009BCD1B /* DevicesRouter.swift */; };
+		FD3B6E262610164C009BCD1B /* DevicesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6E252610164C009BCD1B /* DevicesViewController.storyboard */; };
+		FD3B6E2926101658009BCD1B /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E2826101658009BCD1B /* DevicesViewController.swift */; };
+		FD3B6E2C26101668009BCD1B /* DevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E2B26101668009BCD1B /* DevicesViewModel.swift */; };
 		FD859BF3260EF33C00DF9F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */; };
 		FD859BFC260EF33D00DF9F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD859BFB260EF33D00DF9F86 /* Assets.xcassets */; };
 		FD859BFF260EF33D00DF9F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD859BFD260EF33D00DF9F86 /* LaunchScreen.storyboard */; };
@@ -65,6 +90,31 @@
 		FD3B6DD2260F01A6009BCD1B /* UIFont+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Helpers.swift"; sourceTree = "<group>"; };
 		FD3B6DD6260F01C4009BCD1B /* Data+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Helpers.swift"; sourceTree = "<group>"; };
 		FD3B6DD9260F0201009BCD1B /* Error+Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Code.swift"; sourceTree = "<group>"; };
+		FD3B6DE3260FEC26009BCD1B /* Animosa-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FD3B6DE4260FEC26009BCD1B /* Animosa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-Regular.ttf"; sourceTree = "<group>"; };
+		FD3B6DE5260FEC26009BCD1B /* Animosa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-Light.ttf"; sourceTree = "<group>"; };
+		FD3B6DE6260FEC26009BCD1B /* Animosa-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FD3B6DE7260FEC26009BCD1B /* Animosa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Animosa-Bold.ttf"; sourceTree = "<group>"; };
+		FD3B6DEE260FECDA009BCD1B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FD3B6DF1260FECE9009BCD1B /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		FD3B6DF5260FECFC009BCD1B /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		FD3B6DF9260FED13009BCD1B /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		FD3B6DFD260FED37009BCD1B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FD3B6E0026100F9E009BCD1B /* CountriesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesBuilder.swift; sourceTree = "<group>"; };
+		FD3B6E0326100FA6009BCD1B /* CountriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRouter.swift; sourceTree = "<group>"; };
+		FD3B6E0626100FB5009BCD1B /* CountriesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountriesViewController.storyboard; sourceTree = "<group>"; };
+		FD3B6E0926100FC1009BCD1B /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
+		FD3B6E0C26100FCD009BCD1B /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		FD3B6E1026101120009BCD1B /* CountryDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailBuilder.swift; sourceTree = "<group>"; };
+		FD3B6E132610112D009BCD1B /* CountryDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailRouter.swift; sourceTree = "<group>"; };
+		FD3B6E1626101143009BCD1B /* CountryDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountryDetailViewController.storyboard; sourceTree = "<group>"; };
+		FD3B6E1926101156009BCD1B /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
+		FD3B6E1C26101367009BCD1B /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
+		FD3B6E1F26101633009BCD1B /* DevicesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesBuilder.swift; sourceTree = "<group>"; };
+		FD3B6E222610163C009BCD1B /* DevicesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesRouter.swift; sourceTree = "<group>"; };
+		FD3B6E252610164C009BCD1B /* DevicesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevicesViewController.storyboard; sourceTree = "<group>"; };
+		FD3B6E2826101658009BCD1B /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
+		FD3B6E2B26101668009BCD1B /* DevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewModel.swift; sourceTree = "<group>"; };
 		FD859BEF260EF33C00DF9F86 /* bridgefy-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bridgefy-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD859BFB260EF33D00DF9F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				FD3B6DCA260F0111009BCD1B /* Launch */,
+				FD3B6DDF260FEB9C009BCD1B /* Login */,
+				FD3B6DE0260FEBA4009BCD1B /* Countries */,
+				FD3B6DE1260FEBAF009BCD1B /* Devices */,
 			);
 			path = Bridgefy;
 			sourceTree = "<group>";
@@ -135,6 +188,11 @@
 		FD3B6D76260EF85E009BCD1B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B6DE7260FEC26009BCD1B /* Animosa-Bold.ttf */,
+				FD3B6DE3260FEC26009BCD1B /* Animosa-ExtraBold.ttf */,
+				FD3B6DE6260FEC26009BCD1B /* Animosa-ExtraLight.ttf */,
+				FD3B6DE5260FEC26009BCD1B /* Animosa-Light.ttf */,
+				FD3B6DE4260FEC26009BCD1B /* Animosa-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -191,6 +249,55 @@
 				FD3B6DD9260F0201009BCD1B /* Error+Code.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD3B6DDF260FEB9C009BCD1B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B6DF1260FECE9009BCD1B /* LoginBuilder.swift */,
+				FD3B6DF5260FECFC009BCD1B /* LoginRouter.swift */,
+				FD3B6DF9260FED13009BCD1B /* LoginViewController.storyboard */,
+				FD3B6DEE260FECDA009BCD1B /* LoginViewController.swift */,
+				FD3B6DFD260FED37009BCD1B /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FD3B6DE0260FEBA4009BCD1B /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B6E0F261010DA009BCD1B /* Detail */,
+				FD3B6E0026100F9E009BCD1B /* CountriesBuilder.swift */,
+				FD3B6E0326100FA6009BCD1B /* CountriesRouter.swift */,
+				FD3B6E0626100FB5009BCD1B /* CountriesViewController.storyboard */,
+				FD3B6E0926100FC1009BCD1B /* CountriesViewController.swift */,
+				FD3B6E0C26100FCD009BCD1B /* CountriesViewModel.swift */,
+			);
+			path = Countries;
+			sourceTree = "<group>";
+		};
+		FD3B6DE1260FEBAF009BCD1B /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B6E1F26101633009BCD1B /* DevicesBuilder.swift */,
+				FD3B6E222610163C009BCD1B /* DevicesRouter.swift */,
+				FD3B6E252610164C009BCD1B /* DevicesViewController.storyboard */,
+				FD3B6E2826101658009BCD1B /* DevicesViewController.swift */,
+				FD3B6E2B26101668009BCD1B /* DevicesViewModel.swift */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		FD3B6E0F261010DA009BCD1B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B6E1026101120009BCD1B /* CountryDetailBuilder.swift */,
+				FD3B6E132610112D009BCD1B /* CountryDetailRouter.swift */,
+				FD3B6E1626101143009BCD1B /* CountryDetailViewController.storyboard */,
+				FD3B6E1926101156009BCD1B /* CountryDetailViewController.swift */,
+				FD3B6E1C26101367009BCD1B /* CountryDetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		FD859BE6260EF33C00DF9F86 = {
@@ -323,8 +430,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3B6DE8260FEC26009BCD1B /* Animosa-ExtraBold.ttf in Resources */,
+				FD3B6DEB260FEC26009BCD1B /* Animosa-ExtraLight.ttf in Resources */,
 				FD859BFF260EF33D00DF9F86 /* LaunchScreen.storyboard in Resources */,
+				FD3B6E0726100FB5009BCD1B /* CountriesViewController.storyboard in Resources */,
+				FD3B6DE9260FEC26009BCD1B /* Animosa-Regular.ttf in Resources */,
+				FD3B6DEC260FEC26009BCD1B /* Animosa-Bold.ttf in Resources */,
+				FD3B6DFA260FED13009BCD1B /* LoginViewController.storyboard in Resources */,
 				FD859BFC260EF33D00DF9F86 /* Assets.xcassets in Resources */,
+				FD3B6DEA260FEC26009BCD1B /* Animosa-Light.ttf in Resources */,
+				FD3B6E262610164C009BCD1B /* DevicesViewController.storyboard in Resources */,
+				FD3B6E1726101143009BCD1B /* CountryDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,16 +472,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3B6DEF260FECDA009BCD1B /* LoginViewController.swift in Sources */,
 				FD3B6DA9260EFB57009BCD1B /* UserProfileProvider.swift in Sources */,
 				FD3B6D80260EF9A1009BCD1B /* AppCoordinator.swift in Sources */,
 				FD3B6DBB260F0078009BCD1B /* Builder.swift in Sources */,
 				FD3B6D96260EFA84009BCD1B /* Endpoint.swift in Sources */,
+				FD3B6E0A26100FC1009BCD1B /* CountriesViewController.swift in Sources */,
 				FD3B6D92260EFA64009BCD1B /* NetworkRequest.swift in Sources */,
+				FD3B6E2026101633009BCD1B /* DevicesBuilder.swift in Sources */,
 				FD3B6DA0260EFAE7009BCD1B /* Storyboard.swift in Sources */,
 				FD3B6DC4260F00A8009BCD1B /* ViewModelDataSource.swift in Sources */,
+				FD3B6E2C26101668009BCD1B /* DevicesViewModel.swift in Sources */,
+				FD3B6DFE260FED37009BCD1B /* LoginViewModel.swift in Sources */,
 				FD3B6DAC260EFB6E009BCD1B /* XibView.swift in Sources */,
+				FD3B6DF2260FECE9009BCD1B /* LoginBuilder.swift in Sources */,
 				FD3B6DB8260F0057009BCD1B /* ApiService+UserData.swift in Sources */,
+				FD3B6E1A26101156009BCD1B /* CountryDetailViewController.swift in Sources */,
 				FD3B6DCF260F0182009BCD1B /* StoryboardInstantiable.swift in Sources */,
+				FD3B6E0426100FA6009BCD1B /* CountriesRouter.swift in Sources */,
+				FD3B6E1126101120009BCD1B /* CountryDetailBuilder.swift in Sources */,
 				FD3B6DD7260F01C4009BCD1B /* Data+Helpers.swift in Sources */,
 				FD3B6DDA260F0201009BCD1B /* Error+Code.swift in Sources */,
 				FD3B6D9D260EFAD4009BCD1B /* Context.swift in Sources */,
@@ -374,14 +499,21 @@
 				FD3B6D85260EF9EE009BCD1B /* ApiService.swift in Sources */,
 				FD3B6DC1260F0098009BCD1B /* ViewModel.swift in Sources */,
 				FD3B6DA6260EFB3A009BCD1B /* RoundCornersView.swift in Sources */,
+				FD3B6E2926101658009BCD1B /* DevicesViewController.swift in Sources */,
+				FD3B6E232610163C009BCD1B /* DevicesRouter.swift in Sources */,
 				FD3B6DC7260F00BC009BCD1B /* Router.swift in Sources */,
+				FD3B6E1D26101367009BCD1B /* CountryDetailViewModel.swift in Sources */,
 				FD3B6D8E260EFA4F009BCD1B /* Request.swift in Sources */,
+				FD3B6DF6260FECFC009BCD1B /* LoginRouter.swift in Sources */,
 				FD3B6DD3260F01A6009BCD1B /* UIFont+Helpers.swift in Sources */,
+				FD3B6E0D26100FCD009BCD1B /* CountriesViewModel.swift in Sources */,
 				FD3B6D88260EFA1B009BCD1B /* ApiRequest.swift in Sources */,
 				FD3B6DA3260EFB09009BCD1B /* BridgefyNavigationController.swift in Sources */,
 				FD3B6DB5260F0030009BCD1B /* ApiService+CDN.swift in Sources */,
+				FD3B6E142610112D009BCD1B /* CountryDetailRouter.swift in Sources */,
 				FD3B6D99260EFA96009BCD1B /* HTTPMethod.swift in Sources */,
 				FD859BF3260EF33C00DF9F86 /* AppDelegate.swift in Sources */,
+				FD3B6E0126100F9E009BCD1B /* CountriesBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
