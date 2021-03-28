@@ -10,10 +10,16 @@ import Foundation
 final class Context {
     
     private let apiService: ApiService
-    let userProfileProvider: UserProfileProvider
-
+    private let persistenceProvider: PersistenceProvider
+    let authenticationProvider: AuthenticationProvider
+    let countriesProvider: CountriesProvider
+    let devicesProvider: DevicesProvider
+    
     init(apiService: ApiService) {
         self.apiService = apiService
-        userProfileProvider = UserProfileProvider(apiService: apiService)
+        self.persistenceProvider = PersistenceProvider(keyValueStorage: KeychainHelper())
+        self.authenticationProvider = AuthenticationProvider(apiService: apiService)
+        self.countriesProvider = CountriesProvider(apiService: apiService)
+        self.devicesProvider = DevicesProvider(apiService: apiService)
     }
 }

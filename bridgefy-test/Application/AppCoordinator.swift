@@ -15,16 +15,9 @@ class AppCoordinator {
     }()
     
     func initialize(on window: UIWindow) {
-        startApplication(on: window)
-    }
-}
-
-extension AppCoordinator {
-    
-    func startApplication(on window: UIWindow) {
         let navigationController = BridgefyNavigationController.navigationController()
         let loginViewController = LoginBuilder.build(with: LoginViewModelDataSource(context: context))
+        window.rootViewController = navigationController
         navigationController.viewControllers = [loginViewController]
-        navigationController.popViewController(animated: false)
     }
 }

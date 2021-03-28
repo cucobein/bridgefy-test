@@ -10,8 +10,8 @@ import UIKit
 protocol RouterProtocol {
     
     var viewController: UIViewController? { get }
-    init(viewController: UIViewController)
     func routeBack()
+    init(viewController: UIViewController)
 }
 
 extension RouterProtocol {

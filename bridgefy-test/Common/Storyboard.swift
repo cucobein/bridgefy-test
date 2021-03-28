@@ -9,7 +9,8 @@ import Foundation
 
 enum Storyboard: String {
     
-    case launchScreen = "KantoLaunchScreenViewController"
-    case profile = "KantoProfileViewController"
-    case editProfile = "KantoEditProfileViewController"
+    case login = "LoginViewController"
+    case countries = "CountriesViewController"
+    case countryDetail = "CountryDetailViewController"
+    case devices = "DevicesViewController"
 }
