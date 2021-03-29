@@ -94,6 +94,8 @@
 		FD9FDA0A2611A0C0000227F3 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA092611A0C0000227F3 /* CountryCell.swift */; };
 		FD9FDA102611A173000227F3 /* ImagesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA0F2611A173000227F3 /* ImagesProvider.swift */; };
 		FD9FDA142611A429000227F3 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9FDA132611A429000227F3 /* CountryCell.xib */; };
+		FD9FDA172611ADE3000227F3 /* CountryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA162611ADE3000227F3 /* CountryResource.swift */; };
+		FD9FDA1A2611B075000227F3 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA192611B075000227F3 /* ApplicationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +184,8 @@
 		FD9FDA092611A0C0000227F3 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		FD9FDA0F2611A173000227F3 /* ImagesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesProvider.swift; sourceTree = "<group>"; };
 		FD9FDA132611A429000227F3 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		FD9FDA162611ADE3000227F3 /* CountryResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryResource.swift; sourceTree = "<group>"; };
+		FD9FDA192611B075000227F3 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +277,7 @@
 			children = (
 				FD3B6D8A260EFA33009BCD1B /* ApiResource.swift */,
 				FD9FD9FD26119CCA000227F3 /* CountriesResource.swift */,
+				FD9FDA162611ADE3000227F3 /* CountryResource.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -534,6 +539,7 @@
 			children = (
 				FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */,
 				FD3B6D7F260EF9A1009BCD1B /* AppCoordinator.swift */,
+				FD9FDA192611B075000227F3 /* ApplicationDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -661,6 +667,7 @@
 				FD3B6E8A26115B67009BCD1B /* AnimationGallery.swift in Sources */,
 				FD3B6DBB260F0078009BCD1B /* Builder.swift in Sources */,
 				FD3B6E422610D784009BCD1B /* CountriesProvider.swift in Sources */,
+				FD9FDA1A2611B075000227F3 /* ApplicationDelegate.swift in Sources */,
 				FD9FD9FE26119CCA000227F3 /* CountriesResource.swift in Sources */,
 				FD3B6D96260EFA84009BCD1B /* Endpoint.swift in Sources */,
 				FD3B6E7B26115A58009BCD1B /* UIViewController+Loading.swift in Sources */,
@@ -687,6 +694,7 @@
 				FD3B6DD7260F01C4009BCD1B /* Data+Helpers.swift in Sources */,
 				FD3B6E622610F261009BCD1B /* InputRowViewModel.swift in Sources */,
 				FD3B6E9D2611689D009BCD1B /* TabBarViewController.swift in Sources */,
+				FD9FDA172611ADE3000227F3 /* CountryResource.swift in Sources */,
 				FD3B6DDA260F0201009BCD1B /* Error+Code.swift in Sources */,
 				FD3B6D9D260EFAD4009BCD1B /* Context.swift in Sources */,
 				FD3B6DBE260F008A009BCD1B /* ViewController.swift in Sources */,

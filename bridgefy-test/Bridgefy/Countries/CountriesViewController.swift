@@ -51,5 +51,9 @@ private extension CountriesViewController {
             $0.backgroundColor = .clear
             $0.configure(with: $1)
         }
+        
+        _ = tableView.reactive.selectedRowIndexPath.observeNext { [weak self] indexPath in
+            self?.viewModel.onSelectedCountry(row: indexPath.row)
+        }
     }
 }

@@ -29,6 +29,17 @@ extension RouterProtocol {
         viewController?.navigationController?.popViewController(animated: true)
     }
     
+    func push(viewController: UIViewController, isAlphaTransition: Bool = false) {
+        guard isAlphaTransition else {
+            self.viewController?.navigationController?.delegate = nil
+            self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+            return
+        }
+        let delegate = NavigationDelegate()
+        self.viewController?.navigationController?.delegate = delegate
+        self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func displayLoadingIndicator() {
         viewController?.displayLoadingView(withText: "Loading...")
     }

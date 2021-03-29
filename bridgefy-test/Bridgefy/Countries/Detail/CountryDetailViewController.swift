@@ -28,6 +28,12 @@ final class CountryDetailViewController: UIViewController, ViewControllerProtoco
 private extension CountryDetailViewController {
     
     func configure() {
+        navigationItem.leftBarButtonItem = .textBarButtonItem(title: "<", color: .bridgefyRed, tapHandler: {
+            self.viewModel.goBack()
+        })
+        navigationItem.rightBarButtonItem = .textBarButtonItem(title: "Save", color: .bridgefyRed, tapHandler: {
+        })
+        hidesBottomBarWhenPushed = true
     }
     
     func bindViews() {

@@ -10,6 +10,7 @@ import Foundation
 struct CountryDetailViewModelDataSource: ViewModelDataSourceProtocol {
     
     let context: Context
+    let countryCode: String
 }
 
 final class CountryDetailViewModel: ViewModelProtocol {
@@ -25,5 +26,9 @@ final class CountryDetailViewModel: ViewModelProtocol {
         self.context = dataSource.context
         self.dataSource = dataSource
         self.router = router
+    }
+    
+    func goBack() {
+        router.routeBack()
     }
 }

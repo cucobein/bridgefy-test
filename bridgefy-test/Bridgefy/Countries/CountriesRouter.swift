@@ -14,4 +14,8 @@ final class CountriesRouter: RouterProtocol {
     required init(viewController: UIViewController) {
         self.viewController = viewController
     }
+    
+    func routeToCountryDetail(dataSource: CountryDetailViewModelDataSource) {
+        push(viewController: CountryDetailBuilder.build(with: dataSource))
+    }
 }

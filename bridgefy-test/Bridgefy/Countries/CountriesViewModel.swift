@@ -27,7 +27,7 @@ final class CountriesViewModel: ViewModelProtocol {
     private(set) var context: Context
     private let dataSource: DataSource
     private let countriesProvider: CountriesProvider
-    private let router: Router
+    private let router: CountriesRouter
     let countries = MutableObservableArray<CountryCellDataSource>([])
     var groupingState = Observable<CountriesGroupingState>(.ungrouped)
     
@@ -42,17 +42,27 @@ final class CountriesViewModel: ViewModelProtocol {
     func toggleGroupingState() {
         groupingState.value = groupingState.value == .grouped ? .ungrouped : .grouped
     }
+    
+    func onSelectedCountry(row: Int) {
+        if let countryCode = countries[row].country.alpha2Code {
+            router.routeToCountryDetail(dataSource: CountryDetailViewModelDataSource(context: context,
+                                                                                     countryCode: countryCode))
+        }
+    }
 }
 
 private extension CountriesViewModel {
     
     func fetchData() {
-        countriesProvider.fetchCountries { [unowned self] (result) in
+        router.displayLoadingIndicator()
+        countriesProvider.fetchCountries { [weak self] (result) in
+            guard let self = self else { return }
+            self.router.hideLoadingIndicator()
             switch result {
             case .success(let countries):
                 if let countries = countries {
                     let countries = countries.map({ country -> CountryCellDataSource in
-                        return CountryCellDataSource(context: context, country: country)
+                        return CountryCellDataSource(context: self.context, country: country)
                     })
                     self.countries.replace(with: countries)
                 }
