@@ -69,14 +69,12 @@ extension BridgefyNavigationController: UINavigationControllerDelegate {
     }
     
     func adjustNavigationBar(forStyle style: NavigationBarStyle) {
-        let textColor: UIColor
-        textColor = .gray
-        navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: textColor,
-            NSAttributedString.Key.font: UIFont.animosaBoldFont(withSize: 17)
-        ]
         navigationBar.barTintColor = .clear
         navigationBar.isTranslucent = true
         navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+            NSAttributedString.Key.font: UIFont.animosaBoldFont(withSize: 17)
+        ]
     }
 }

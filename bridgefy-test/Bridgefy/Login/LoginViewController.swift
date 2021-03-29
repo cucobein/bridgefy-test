@@ -38,9 +38,6 @@ private extension LoginViewController {
                                               showableError: "Invalid Email input",
                                               maxCharCount: 24)
         emailViewModel.neededHeightForDisplay.bind(to: viewModel.minHeightNeeded)
-        _ = viewModel.showEmailError.observeNext { (show) in
-            self.emailRow.error(visible: show)
-        }
         emailRow.configure(for: emailViewModel)
         contentStackView.insertArrangedSubview(emailRow, at: 0)
         
@@ -50,14 +47,19 @@ private extension LoginViewController {
                                                   maxCharCount: 24,
                                                   isSecureTextEntry: true)
         passwordViewModel.neededHeightForDisplay.bind(to: viewModel.minHeightNeeded)
-        _ = viewModel.showPasswordError.observeNext { (show) in
-            self.passwordRow.error(visible: show)
-        }
         passwordRow.configure(for: passwordViewModel)
         contentStackView.insertArrangedSubview(passwordRow, at: 1)
     }
     
     func bindViews() {
+        _ = viewModel.showEmailError.observeNext { (show) in
+            self.emailRow.error(visible: show)
+        }
+        
+        _ = viewModel.showPasswordError.observeNext { (show) in
+            self.passwordRow.error(visible: show)
+        }
+        
         _ = loginButton.reactive.controlEvents(.touchUpInside).observeNext { [weak self] in
             guard let self = self else { return }
             self.viewModel.onLogin()

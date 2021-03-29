@@ -14,6 +14,7 @@ final class Context {
     let authenticationProvider: AuthenticationProvider
     let countriesProvider: CountriesProvider
     let devicesProvider: DevicesProvider
+    let imagesProvider: ImagesProvider
     
     init(apiService: ApiService) {
         self.apiService = apiService
@@ -21,5 +22,6 @@ final class Context {
         self.authenticationProvider = AuthenticationProvider(apiService: apiService)
         self.countriesProvider = CountriesProvider(apiService: apiService)
         self.devicesProvider = DevicesProvider(apiService: apiService)
+        self.imagesProvider = ImagesProvider(apiService: apiService)
     }
 }

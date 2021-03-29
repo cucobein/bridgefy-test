@@ -4,9 +4,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Animosa-Bold.ttf">
+            <string>Animosa-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Countries-->
         <scene sceneID="7Hg-WS-b0x">
@@ -15,19 +22,61 @@
                     <view key="view" contentMode="scaleToFill" id="yW1-Pu-0it">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FE8-3Y-VHF">
+                                <rect key="frame" x="16" y="44" width="382" height="101.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Countries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSD-Ww-lG5">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="Animosa-Bold" family="Animosa" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mlD-OU-Av5">
+                                        <rect key="frame" x="0.0" y="45.5" width="382" height="56"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iXB-8p-l3E">
+                                <rect key="frame" x="0.0" y="153.5" width="414" height="659.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Bv4-dE-3ZX"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FE8-3Y-VHF" firstAttribute="top" secondItem="Bv4-dE-3ZX" secondAttribute="top" id="AnP-81-eIO"/>
+                            <constraint firstItem="Bv4-dE-3ZX" firstAttribute="trailing" secondItem="FE8-3Y-VHF" secondAttribute="trailing" constant="16" id="N55-RM-eXf"/>
+                            <constraint firstItem="Bv4-dE-3ZX" firstAttribute="bottom" secondItem="iXB-8p-l3E" secondAttribute="bottom" id="Qq1-et-0vZ"/>
+                            <constraint firstItem="iXB-8p-l3E" firstAttribute="leading" secondItem="Bv4-dE-3ZX" secondAttribute="leading" id="iDU-8Y-bgG"/>
+                            <constraint firstItem="iXB-8p-l3E" firstAttribute="top" secondItem="FE8-3Y-VHF" secondAttribute="bottom" constant="8" id="tZi-xc-4FW"/>
+                            <constraint firstItem="FE8-3Y-VHF" firstAttribute="leading" secondItem="Bv4-dE-3ZX" secondAttribute="leading" constant="16" id="zVJ-f4-bEX"/>
+                            <constraint firstItem="Bv4-dE-3ZX" firstAttribute="trailing" secondItem="iXB-8p-l3E" secondAttribute="trailing" id="za6-wr-Cjs"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Countries" image="CountriesOff" selectedImage="CountriesOn" id="7kV-X7-KZS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchBar" destination="mlD-OU-Av5" id="MSo-ey-8Ay"/>
+                        <outlet property="tableView" destination="iXB-8p-l3E" id="A7b-tD-NrK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ma4-ev-7vK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="219" y="125"/>
+            <point key="canvasLocation" x="218.84057971014494" y="124.55357142857142"/>
         </scene>
     </scenes>
     <resources>
         <image name="CountriesOff" width="31" height="31"/>
         <image name="CountriesOn" width="31" height="31"/>
+        <namedColor name="AccentColor">
+            <color red="0.92941176470588238" green="0.36078431372549019" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

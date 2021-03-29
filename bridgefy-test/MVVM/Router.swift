@@ -46,13 +46,6 @@ extension RouterProtocol {
         viewController?.present(alert, animated: true)
     }
     
-    func selectDashboardTabAt(index: TabBarSectionIndex) {
-        guard let rootViewController = UIApplication.shared.keyWindow?.rootViewController as? BridgefyNavigationController else { return }
-        if let dashboard = rootViewController.viewControllers.first as? TabBarViewController {
-            dashboard.selectTabAt(index: index.rawValue)
-        }
-    }
-    
     func routetoDashboard(with viewModelDataSource: TabBarViewModelDataSource) {
         guard let navigationController = viewController?.navigationController else { return }
         if navigationController.viewControllers.first is TabBarViewController {

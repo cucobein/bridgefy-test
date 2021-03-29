@@ -28,15 +28,14 @@ final class TabBarViewController: UITabBarController, ViewControllerProtocol {
     override var preferredStatusBarStyle: UIStatusBarStyle {
          .lightContent
     }
-    
-    func selectTabAt(index: Int) {
-        selectedIndex = index
-        refreshNavigationBar()
-    }
 }
 
 extension TabBarViewController: UITabBarControllerDelegate {
 
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        refreshNavigationBar()
+    }
+    
     func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         AlphaTransition()
     }
@@ -55,9 +54,6 @@ private extension TabBarViewController {
             }
         }
     }
-}
-
-private extension TabBarViewController {
     
     func addChilds() {
         let countriesViewController = CountriesBuilder.build(with: viewModel.countriesDataSource)
@@ -76,5 +72,6 @@ private extension TabBarViewController {
             $0.tabBarItem.setTitleTextAttributes(selectedTextAtributes, for: .selected)
             $0.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -4)
         }
+        refreshNavigationBar()
     }
 }

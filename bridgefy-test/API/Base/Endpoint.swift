@@ -9,10 +9,17 @@ import Foundation
 
 enum Endpoint {
     
-    static var kanto: URLComponents {
+    static var bridgefy: URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
-        urlComponents.host = "run.mocky.io"
+        urlComponents.host = "restcountries-v1.p.rapidapi.com"
+        return urlComponents
+    }
+    
+    static var flagpedia: URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "flagpedia.net"
         return urlComponents
     }
 }

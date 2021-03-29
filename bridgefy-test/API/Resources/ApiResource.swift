@@ -22,10 +22,3 @@ extension ApiResource where Self.Model: Decodable {
         return try decored.decode(Model.self, from: data)
     }
 }
-
-extension ApiResource where Self.Model: EmptyNetworkResult {
-    
-    func makeModel(fromData data: Data) throws -> EmptyNetworkResult {
-        EmptyNetworkResult()
-    }
-}

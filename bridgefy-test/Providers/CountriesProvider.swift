@@ -15,4 +15,15 @@ class CountriesProvider {
     init(apiService: ApiService) {
         self.apiService = apiService
     }
+    
+    func fetchCountries(completion: @escaping(Result<[CountrySummary]?, Error>) -> Void) {
+        apiService.getCountries { result in
+            switch result {
+            case .success(let countries):
+                completion(.success(countries))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

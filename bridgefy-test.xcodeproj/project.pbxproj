@@ -23,7 +23,6 @@
 		FD3B6DA9260EFB57009BCD1B /* AuthenticationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DA8260EFB57009BCD1B /* AuthenticationProvider.swift */; };
 		FD3B6DAC260EFB6E009BCD1B /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DAB260EFB6E009BCD1B /* XibView.swift */; };
 		FD3B6DB5260F0030009BCD1B /* ApiService+CDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DB4260F0030009BCD1B /* ApiService+CDN.swift */; };
-		FD3B6DB8260F0057009BCD1B /* ApiService+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DB7260F0057009BCD1B /* ApiService+UserData.swift */; };
 		FD3B6DBB260F0078009BCD1B /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DBA260F0078009BCD1B /* Builder.swift */; };
 		FD3B6DBE260F008A009BCD1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DBD260F008A009BCD1B /* ViewController.swift */; };
 		FD3B6DC1260F0098009BCD1B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6DC0260F0098009BCD1B /* ViewModel.swift */; };
@@ -88,6 +87,13 @@
 		FD3B6EAB26116BE4009BCD1B /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6EAA26116BE4009BCD1B /* TabBarViewModel.swift */; };
 		FD859BF3260EF33C00DF9F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */; };
 		FD859BFC260EF33D00DF9F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD859BFB260EF33D00DF9F86 /* Assets.xcassets */; };
+		FD9FD9FB26118697000227F3 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FD9FA26118697000227F3 /* UIBarButtonItem+Extensions.swift */; };
+		FD9FD9FE26119CCA000227F3 /* CountriesResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FD9FD26119CCA000227F3 /* CountriesResource.swift */; };
+		FD9FDA0126119D6A000227F3 /* URLRequest+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA0026119D6A000227F3 /* URLRequest+Helpers.swift */; };
+		FD9FDA0526119F82000227F3 /* ApiService+Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA0426119F82000227F3 /* ApiService+Resources.swift */; };
+		FD9FDA0A2611A0C0000227F3 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA092611A0C0000227F3 /* CountryCell.swift */; };
+		FD9FDA102611A173000227F3 /* ImagesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA0F2611A173000227F3 /* ImagesProvider.swift */; };
+		FD9FDA142611A429000227F3 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9FDA132611A429000227F3 /* CountryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,7 +112,6 @@
 		FD3B6DA8260EFB57009BCD1B /* AuthenticationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProvider.swift; sourceTree = "<group>"; };
 		FD3B6DAB260EFB6E009BCD1B /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		FD3B6DB4260F0030009BCD1B /* ApiService+CDN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiService+CDN.swift"; sourceTree = "<group>"; };
-		FD3B6DB7260F0057009BCD1B /* ApiService+UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiService+UserData.swift"; sourceTree = "<group>"; };
 		FD3B6DBA260F0078009BCD1B /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		FD3B6DBD260F008A009BCD1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD3B6DC0260F0098009BCD1B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -170,6 +175,13 @@
 		FD859BFB260EF33D00DF9F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD859BFE260EF33D00DF9F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD859C00260EF33D00DF9F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD9FD9FA26118697000227F3 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
+		FD9FD9FD26119CCA000227F3 /* CountriesResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesResource.swift; sourceTree = "<group>"; };
+		FD9FDA0026119D6A000227F3 /* URLRequest+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Helpers.swift"; sourceTree = "<group>"; };
+		FD9FDA0426119F82000227F3 /* ApiService+Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiService+Resources.swift"; sourceTree = "<group>"; };
+		FD9FDA092611A0C0000227F3 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		FD9FDA0F2611A173000227F3 /* ImagesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesProvider.swift; sourceTree = "<group>"; };
+		FD9FDA132611A429000227F3 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				FD3B6D8A260EFA33009BCD1B /* ApiResource.swift */,
+				FD9FD9FD26119CCA000227F3 /* CountriesResource.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -299,6 +312,8 @@
 				FD3B6E7A26115A58009BCD1B /* UIViewController+Loading.swift */,
 				FD3B6E8526115ADA009BCD1B /* UIView+Autolayout.swift */,
 				FD3B6EA626116B49009BCD1B /* UIColor+Bridgefy.swift */,
+				FD9FD9FA26118697000227F3 /* UIBarButtonItem+Extensions.swift */,
+				FD9FDA0026119D6A000227F3 /* URLRequest+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,6 +333,7 @@
 		FD3B6DE0260FEBA4009BCD1B /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				FD9FDA082611A0A2000227F3 /* Cells */,
 				FD3B6E0F261010DA009BCD1B /* Detail */,
 				FD3B6E0026100F9E009BCD1B /* CountriesBuilder.swift */,
 				FD3B6E0326100FA6009BCD1B /* CountriesRouter.swift */,
@@ -367,6 +383,7 @@
 				FD3B6E412610D784009BCD1B /* CountriesProvider.swift */,
 				FD3B6E442610D796009BCD1B /* DevicesProvider.swift */,
 				FD3B6E482610D7C9009BCD1B /* PersistenceProvider.swift */,
+				FD9FDA0F2611A173000227F3 /* ImagesProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -474,6 +491,15 @@
 			path = "bridgefy-test";
 			sourceTree = "<group>";
 		};
+		FD9FDA082611A0A2000227F3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FD9FDA092611A0C0000227F3 /* CountryCell.swift */,
+				FD9FDA132611A429000227F3 /* CountryCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		FDB2EA19260EF5E300B8BDE4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,8 +523,8 @@
 				FD3B6D82260EF9CF009BCD1B /* Base */,
 				FD3B6D83260EF9D4009BCD1B /* Resources */,
 				FD3B6D84260EF9EE009BCD1B /* ApiService.swift */,
+				FD9FDA0426119F82000227F3 /* ApiService+Resources.swift */,
 				FD3B6DB4260F0030009BCD1B /* ApiService+CDN.swift */,
-				FD3B6DB7260F0057009BCD1B /* ApiService+UserData.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -582,6 +608,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9FDA142611A429000227F3 /* CountryCell.xib in Resources */,
 				FD3B6E502610DBBF009BCD1B /* LaunchScreen.storyboard in Resources */,
 				FD3B6E642610F261009BCD1B /* InputRow.xib in Resources */,
 				FD3B6DE8260FEC26009BCD1B /* Animosa-ExtraBold.ttf in Resources */,
@@ -634,6 +661,7 @@
 				FD3B6E8A26115B67009BCD1B /* AnimationGallery.swift in Sources */,
 				FD3B6DBB260F0078009BCD1B /* Builder.swift in Sources */,
 				FD3B6E422610D784009BCD1B /* CountriesProvider.swift in Sources */,
+				FD9FD9FE26119CCA000227F3 /* CountriesResource.swift in Sources */,
 				FD3B6D96260EFA84009BCD1B /* Endpoint.swift in Sources */,
 				FD3B6E7B26115A58009BCD1B /* UIViewController+Loading.swift in Sources */,
 				FD3B6E0A26100FC1009BCD1B /* CountriesViewController.swift in Sources */,
@@ -647,13 +675,14 @@
 				FD3B6E2C26101668009BCD1B /* DevicesViewModel.swift in Sources */,
 				FD3B6DFE260FED37009BCD1B /* LoginViewModel.swift in Sources */,
 				FD3B6EAB26116BE4009BCD1B /* TabBarViewModel.swift in Sources */,
+				FD9FDA0126119D6A000227F3 /* URLRequest+Helpers.swift in Sources */,
 				FD3B6DAC260EFB6E009BCD1B /* XibView.swift in Sources */,
 				FD3B6DF2260FECE9009BCD1B /* LoginBuilder.swift in Sources */,
-				FD3B6DB8260F0057009BCD1B /* ApiService+UserData.swift in Sources */,
 				FD3B6E1A26101156009BCD1B /* CountryDetailViewController.swift in Sources */,
 				FD3B6E632610F261009BCD1B /* InputRow.swift in Sources */,
 				FD3B6DCF260F0182009BCD1B /* StoryboardInstantiable.swift in Sources */,
 				FD3B6E0426100FA6009BCD1B /* CountriesRouter.swift in Sources */,
+				FD9FDA0A2611A0C0000227F3 /* CountryCell.swift in Sources */,
 				FD3B6E1126101120009BCD1B /* CountryDetailBuilder.swift in Sources */,
 				FD3B6DD7260F01C4009BCD1B /* Data+Helpers.swift in Sources */,
 				FD3B6E622610F261009BCD1B /* InputRowViewModel.swift in Sources */,
@@ -661,12 +690,14 @@
 				FD3B6DDA260F0201009BCD1B /* Error+Code.swift in Sources */,
 				FD3B6D9D260EFAD4009BCD1B /* Context.swift in Sources */,
 				FD3B6DBE260F008A009BCD1B /* ViewController.swift in Sources */,
+				FD9FDA102611A173000227F3 /* ImagesProvider.swift in Sources */,
 				FD3B6D8B260EFA33009BCD1B /* ApiResource.swift in Sources */,
 				FD3B6E672610F94B009BCD1B /* UITextField+Helpers.swift in Sources */,
 				FD3B6E452610D796009BCD1B /* DevicesProvider.swift in Sources */,
 				FD3B6D85260EF9EE009BCD1B /* ApiService.swift in Sources */,
 				FD3B6DC1260F0098009BCD1B /* ViewModel.swift in Sources */,
 				FD3B6DA6260EFB3A009BCD1B /* RoundCornersView.swift in Sources */,
+				FD9FD9FB26118697000227F3 /* UIBarButtonItem+Extensions.swift in Sources */,
 				FD3B6E2926101658009BCD1B /* DevicesViewController.swift in Sources */,
 				FD3B6E232610163C009BCD1B /* DevicesRouter.swift in Sources */,
 				FD3B6DC7260F00BC009BCD1B /* Router.swift in Sources */,
@@ -681,6 +712,7 @@
 				FD3B6DA3260EFB09009BCD1B /* BridgefyNavigationController.swift in Sources */,
 				FD3B6DB5260F0030009BCD1B /* ApiService+CDN.swift in Sources */,
 				FD3B6E5A2610E258009BCD1B /* KeychainHelper.swift in Sources */,
+				FD9FDA0526119F82000227F3 /* ApiService+Resources.swift in Sources */,
 				FD3B6E142610112D009BCD1B /* CountryDetailRouter.swift in Sources */,
 				FD3B6EA22611694E009BCD1B /* AlphaTransition.swift in Sources */,
 				FD3B6D99260EFA96009BCD1B /* HTTPMethod.swift in Sources */,
