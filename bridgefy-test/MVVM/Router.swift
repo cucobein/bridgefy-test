@@ -23,4 +23,12 @@ extension RouterProtocol {
     func routeBack() {
         viewController?.navigationController?.popViewController(animated: true)
     }
+    
+    func displayLoadingIndicator() {
+        viewController?.displayLoadingView(withText: "Loading...")
+    }
+    
+    func hideLoadingIndicator() {
+        viewController?.dismissLoadingView()
+    }
 }
