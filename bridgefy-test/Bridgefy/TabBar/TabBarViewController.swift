@@ -35,21 +35,12 @@ final class TabBarViewController: UITabBarController, ViewControllerProtocol {
     }
 }
 
-// MARK: Tab Bar Delegate Methods
-
 extension TabBarViewController: UITabBarControllerDelegate {
-    
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        trackTabBarEvent(for: viewController.tabBarItem.title ?? "")
-        return true
-    }
 
     func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         AlphaTransition()
     }
 }
-
-// MARK: Refreshing Navigation Bar
 
 private extension TabBarViewController {
     
@@ -66,32 +57,6 @@ private extension TabBarViewController {
     }
 }
 
-// MARK: Analytics
-
-private extension TabBarViewController {
-    
-    func trackTabBarEvent(for itemTitle: String) {
-//        var selectedOption = ""
-//        switch itemTitle {
-//        case "INICIO":
-//            selectedOption = "home"
-//        case "OPCIONES":
-//            selectedOption = "options"
-//        case "VENDER":
-//            selectedOption = "sell"
-//        default:
-//            break
-//        }
-//
-//        if !selectedOption.isEmpty {
-//            AnalyticsController.trackEvent(.navigationBar,
-//                                           parameters: [.custom("optionSelected", selectedOption)])
-//        }
-    }
-}
-
-// MARK: Bond functions
-
 private extension TabBarViewController {
     
     func addChilds() {
@@ -101,8 +66,8 @@ private extension TabBarViewController {
     }
     
     func configure() {
-        let unselectedTextAtributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.lightGray, .font: UIFont.animosaBoldFont(withSize: 9)]
-        let selectedTextAtributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.bridgefyRed, .font: UIFont.animosaBoldFont(withSize: 9)]
+        let unselectedTextAtributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.lightGray, .font: UIFont.animosaBoldFont(withSize: 12)]
+        let selectedTextAtributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.bridgefyRed, .font: UIFont.animosaBoldFont(withSize: 12)]
         tabBar.unselectedItemTintColor = .lightGray
         tabBar.tintColor = UIColor.bridgefyRed
         setViewControllers(tabViewControllers, animated: false)

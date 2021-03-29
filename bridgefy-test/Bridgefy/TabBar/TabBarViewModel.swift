@@ -9,12 +9,13 @@ import Foundation
 import Bond
 
 struct TabBarViewModelDataSource: ViewModelDataSourceProtocol {
+    
     let context: Context
 }
 
 final class TabBarViewModel: ViewModelProtocol {
     
-    let context: Context
+    private let context: Context
     private let router: TabBarRouter
     
     let countriesDataSource: CountriesViewModelDataSource

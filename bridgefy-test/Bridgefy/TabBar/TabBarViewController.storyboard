@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,8 +15,9 @@
                     <tabBar key="view" contentMode="scaleToFill" id="HV4-OV-1gR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <items/>
+                        <color key="tintColor" name="AccentColor"/>
                     </tabBar>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o7h-3c-zVS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -23,4 +25,9 @@
             <point key="canvasLocation" x="259" y="99"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.93300002813339233" green="0.36100000143051147" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
