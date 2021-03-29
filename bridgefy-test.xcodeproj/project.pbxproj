@@ -79,6 +79,13 @@
 		FD3B6E8626115ADA009BCD1B /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E8526115ADA009BCD1B /* UIView+Autolayout.swift */; };
 		FD3B6E8A26115B67009BCD1B /* AnimationGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E8926115B67009BCD1B /* AnimationGallery.swift */; };
 		FD3B6E8F26115D72009BCD1B /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6E8E26115D72009BCD1B /* loading.json */; };
+		FD3B6E932611672A009BCD1B /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E922611672A009BCD1B /* TabBarRouter.swift */; };
+		FD3B6E972611680B009BCD1B /* TabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E962611680B009BCD1B /* TabBarBuilder.swift */; };
+		FD3B6E9A2611686E009BCD1B /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD3B6E992611686E009BCD1B /* TabBarViewController.storyboard */; };
+		FD3B6E9D2611689D009BCD1B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E9C2611689D009BCD1B /* TabBarViewController.swift */; };
+		FD3B6EA22611694E009BCD1B /* AlphaTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6EA12611694E009BCD1B /* AlphaTransition.swift */; };
+		FD3B6EA726116B49009BCD1B /* UIColor+Bridgefy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6EA626116B49009BCD1B /* UIColor+Bridgefy.swift */; };
+		FD3B6EAB26116BE4009BCD1B /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6EAA26116BE4009BCD1B /* TabBarViewModel.swift */; };
 		FD859BF3260EF33C00DF9F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */; };
 		FD859BFC260EF33D00DF9F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD859BFB260EF33D00DF9F86 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -151,6 +158,13 @@
 		FD3B6E8526115ADA009BCD1B /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI\U0010View+Autolayout.swift"; sourceTree = "<group>"; };
 		FD3B6E8926115B67009BCD1B /* AnimationGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationGallery.swift; sourceTree = "<group>"; };
 		FD3B6E8E26115D72009BCD1B /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		FD3B6E922611672A009BCD1B /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
+		FD3B6E962611680B009BCD1B /* TabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBuilder.swift; sourceTree = "<group>"; };
+		FD3B6E992611686E009BCD1B /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
+		FD3B6E9C2611689D009BCD1B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		FD3B6EA12611694E009BCD1B /* AlphaTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaTransition.swift; sourceTree = "<group>"; };
+		FD3B6EA626116B49009BCD1B /* UIColor+Bridgefy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Bridgefy.swift"; sourceTree = "<group>"; };
+		FD3B6EAA26116BE4009BCD1B /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		FD859BEF260EF33C00DF9F86 /* bridgefy-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bridgefy-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD859BFB260EF33D00DF9F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +204,7 @@
 			children = (
 				FD3B6DCA260F0111009BCD1B /* Launch */,
 				FD3B6DDF260FEB9C009BCD1B /* Login */,
+				FD3B6E91261166CB009BCD1B /* TabBar */,
 				FD3B6DE0260FEBA4009BCD1B /* Countries */,
 				FD3B6DE1260FEBAF009BCD1B /* Devices */,
 			);
@@ -283,6 +298,7 @@
 				FD3B6E772611598D009BCD1B /* String+Regex.swift */,
 				FD3B6E7A26115A58009BCD1B /* UIViewController+Loading.swift */,
 				FD3B6E8526115ADA009BCD1B /* UIView+Autolayout.swift */,
+				FD3B6EA626116B49009BCD1B /* UIColor+Bridgefy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +421,26 @@
 			path = Lottie;
 			sourceTree = "<group>";
 		};
+		FD3B6E91261166CB009BCD1B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B6E922611672A009BCD1B /* TabBarRouter.swift */,
+				FD3B6E962611680B009BCD1B /* TabBarBuilder.swift */,
+				FD3B6E992611686E009BCD1B /* TabBarViewController.storyboard */,
+				FD3B6E9C2611689D009BCD1B /* TabBarViewController.swift */,
+				FD3B6EAA26116BE4009BCD1B /* TabBarViewModel.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FD3B6EA026116943009BCD1B /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				FD3B6EA12611694E009BCD1B /* AlphaTransition.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		FD859BE6260EF33C00DF9F86 = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +477,7 @@
 		FDB2EA19260EF5E300B8BDE4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B6EA026116943009BCD1B /* Transitions */,
 				FD3B6E8826115B57009BCD1B /* Animations */,
 				FD3B6E8026115A94009BCD1B /* Indicators */,
 				FD3B6E5D2610E34E009BCD1B /* Inputs */,
@@ -552,6 +589,7 @@
 				FD3B6E0726100FB5009BCD1B /* CountriesViewController.storyboard in Resources */,
 				FD3B6DE9260FEC26009BCD1B /* Animosa-Regular.ttf in Resources */,
 				FD3B6E8F26115D72009BCD1B /* loading.json in Resources */,
+				FD3B6E9A2611686E009BCD1B /* TabBarViewController.storyboard in Resources */,
 				FD3B6DEC260FEC26009BCD1B /* Animosa-Bold.ttf in Resources */,
 				FD3B6DFA260FED13009BCD1B /* LoginViewController.storyboard in Resources */,
 				FD859BFC260EF33D00DF9F86 /* Assets.xcassets in Resources */,
@@ -602,11 +640,13 @@
 				FD3B6E3D26101AA1009BCD1B /* KeyValueStorage.swift in Sources */,
 				FD3B6E782611598D009BCD1B /* String+Regex.swift in Sources */,
 				FD3B6D92260EFA64009BCD1B /* NetworkRequest.swift in Sources */,
+				FD3B6EA726116B49009BCD1B /* UIColor+Bridgefy.swift in Sources */,
 				FD3B6E2026101633009BCD1B /* DevicesBuilder.swift in Sources */,
 				FD3B6DA0260EFAE7009BCD1B /* Storyboard.swift in Sources */,
 				FD3B6DC4260F00A8009BCD1B /* ViewModelDataSource.swift in Sources */,
 				FD3B6E2C26101668009BCD1B /* DevicesViewModel.swift in Sources */,
 				FD3B6DFE260FED37009BCD1B /* LoginViewModel.swift in Sources */,
+				FD3B6EAB26116BE4009BCD1B /* TabBarViewModel.swift in Sources */,
 				FD3B6DAC260EFB6E009BCD1B /* XibView.swift in Sources */,
 				FD3B6DF2260FECE9009BCD1B /* LoginBuilder.swift in Sources */,
 				FD3B6DB8260F0057009BCD1B /* ApiService+UserData.swift in Sources */,
@@ -617,6 +657,7 @@
 				FD3B6E1126101120009BCD1B /* CountryDetailBuilder.swift in Sources */,
 				FD3B6DD7260F01C4009BCD1B /* Data+Helpers.swift in Sources */,
 				FD3B6E622610F261009BCD1B /* InputRowViewModel.swift in Sources */,
+				FD3B6E9D2611689D009BCD1B /* TabBarViewController.swift in Sources */,
 				FD3B6DDA260F0201009BCD1B /* Error+Code.swift in Sources */,
 				FD3B6D9D260EFAD4009BCD1B /* Context.swift in Sources */,
 				FD3B6DBE260F008A009BCD1B /* ViewController.swift in Sources */,
@@ -641,8 +682,11 @@
 				FD3B6DB5260F0030009BCD1B /* ApiService+CDN.swift in Sources */,
 				FD3B6E5A2610E258009BCD1B /* KeychainHelper.swift in Sources */,
 				FD3B6E142610112D009BCD1B /* CountryDetailRouter.swift in Sources */,
+				FD3B6EA22611694E009BCD1B /* AlphaTransition.swift in Sources */,
 				FD3B6D99260EFA96009BCD1B /* HTTPMethod.swift in Sources */,
+				FD3B6E972611680B009BCD1B /* TabBarBuilder.swift in Sources */,
 				FD859BF3260EF33C00DF9F86 /* AppDelegate.swift in Sources */,
+				FD3B6E932611672A009BCD1B /* TabBarRouter.swift in Sources */,
 				FD3B6E8226115AA5009BCD1B /* LoadingViewController.swift in Sources */,
 				FD3B6E0126100F9E009BCD1B /* CountriesBuilder.swift in Sources */,
 				FD3B6E732611002B009BCD1B /* RoundedButton.swift in Sources */,

@@ -7,6 +7,4 @@
 
 import Foundation
 
-struct User {
-    // This is a mock
-}
+struct User {  }

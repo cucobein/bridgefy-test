@@ -8,7 +8,7 @@
 import Foundation
 
 enum ApiServiceError: Error {
-    
+
     case apiError(code: String?, name: String?, message: String)
 }
 

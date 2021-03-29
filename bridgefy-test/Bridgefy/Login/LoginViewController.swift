@@ -47,7 +47,8 @@ private extension LoginViewController {
         let passwordViewModel = InputRowViewModel(placeHolderText: "Password",
                                                   selectedOption: viewModel.password,
                                                   showableError: "Invalid Password input",
-                                                  maxCharCount: 24)
+                                                  maxCharCount: 24,
+                                                  isSecureTextEntry: true)
         passwordViewModel.neededHeightForDisplay.bind(to: viewModel.minHeightNeeded)
         _ = viewModel.showPasswordError.observeNext { (show) in
             self.passwordRow.error(visible: show)

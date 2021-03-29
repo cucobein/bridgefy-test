@@ -21,6 +21,7 @@ final class InputRow: XibView {
         self.viewModel = viewModel
         inputTextField.placeholder = viewModel.placeHolderText
         inputTextField.keyboardType = viewModel.inputType
+        inputTextField.isSecureTextEntry = viewModel.isSecureTextEntry
         self.selectedOption = viewModel.selectedOption
         inputTextField.delegate = self
         errorLabel.text = viewModel.showableError

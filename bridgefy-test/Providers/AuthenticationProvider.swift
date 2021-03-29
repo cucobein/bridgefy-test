@@ -8,6 +8,11 @@
 import UIKit
 import Bond
 
+enum LoginError: Error {
+
+    case invalidEmailOrPassword
+}
+
 class AuthenticationProvider {
     
     private let apiService: ApiService
@@ -17,51 +22,16 @@ class AuthenticationProvider {
         self.apiService = apiService
     }
     
-    //    func getImage(url: String, completion: @escaping(Result<UIImage, Error>) -> Void) {
-    //        guard let imageURL = URL(string: url) else {
-    //            return
-    //        }
-    //        apiService.getImage(fromURL: imageURL) { (image, _) in
-    //            guard let imageResult = image else {
-    //                completion(.failure(NetworkError.nilData))
-    //                return
-    //            }
-    //            completion(.success(imageResult))
-    //        }
-    //    }
-    
-    //    func fetchUserDataProfile(completion: @escaping(Result<UserProfile?, Error>) -> Void) {
-    //        apiService.getUserData { result in
-    //            switch result {
-    //            case .success(let userData):
-    //                self.persistenceController.storeUserProfile(with: userData)
-    //                completion(.success(self.persistenceController.userProfile.value))
-    //            case .failure(let error):
-    //                completion(.failure(error))
-    //            }
-    //        }
-    //    }
-    //
-    //    func fetchUserVideos(completion: @escaping(Result<[UserVideo]?, Error>) -> Void) {
-    //        apiService.getUserVideos { result in
-    //            switch result {
-    //            case .success(let userVideos):
-    //                self.persistenceController.storeUserVideos(with: userVideos)
-    //                completion(.success(self.persistenceController.userVideos.value))
-    //            case .failure(let error):
-    //                completion(.failure(error))
-    //            }
-    //        }
-    //    }
-    
-    //    func updateUserProfileWith(name: String, username: String, bio: String, selectedImage: Data?) {
-    //        persistenceController.updateUserProfileWith(name: name,
-    //                                                    username: username,
-    //                                                    bio: bio,
-    //                                                    selectedImage: selectedImage)
-    //    }
-    //
-    //    func toggleUserVideoLikes(with userVideo: UserVideo) {
-    //        persistenceController.toggleUserVideoLikes(with: userVideo)
-    //    }
+    func login(email: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+        if email == "challenge@bridgefy.me" &&
+            password == "P@$$w0rD!" {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 0.2...2.0)) {
+                completion(.success("Successful login"))
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double.random(in: 0.2...2.0)) {
+                completion(.failure(LoginError.invalidEmailOrPassword))
+            }
+        }
+    }
 }
