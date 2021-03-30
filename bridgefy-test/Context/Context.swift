@@ -10,7 +10,7 @@ import Foundation
 final class Context {
     
     private let apiService: ApiService
-    private let persistenceProvider: PersistenceProvider
+    let persistenceProvider: PersistenceProvider
     let authenticationProvider: AuthenticationProvider
     let countriesProvider: CountriesProvider
     let devicesProvider: DevicesProvider

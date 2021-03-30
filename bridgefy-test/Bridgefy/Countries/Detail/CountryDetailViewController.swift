@@ -46,6 +46,7 @@ private extension CountryDetailViewController {
             self.viewModel.goBack()
         })
         navigationItem.rightBarButtonItem = .textBarButtonItem(title: "Save", color: .bridgefyRed, tapHandler: {
+            self.viewModel.toggleStorageState()
         })
         navigationItem.title = viewModel.country.name
         hidesBottomBarWhenPushed = true
@@ -53,6 +54,15 @@ private extension CountryDetailViewController {
     }
     
     func bindViews() {
+        _ = viewModel.storageState.observeNext { [weak self] in
+            guard let self = self else { return }
+            switch $0 {
+            case .stored:
+                self.navigationItem.rightBarButtonItem?.title = "Delete"
+            case .notStored:
+                self.navigationItem.rightBarButtonItem?.title = "Save"
+            }
+        }
         _ = viewModel.flagImage.observeNext { [weak self] in
             if let image = $0 {
                 self?.flagImageView.image = image

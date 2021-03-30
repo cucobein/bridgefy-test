@@ -31,7 +31,7 @@ final class CountriesViewModel: ViewModelProtocol {
     private var countriesData = [CountrySummary]()
     let countries = MutableObservableArray<CountryCellDataSource>([])
     let groupedCountries = MutableObservableArray2D<String, CountryCellDataSource>(Array2D<String, CountryCellDataSource>())
-    var groupingState = Observable<CountriesGroupingState>(.ungrouped)
+    let groupingState = Observable<CountriesGroupingState>(.ungrouped)
     
     init(dataSource: CountriesViewModelDataSource, router: CountriesRouter) {
         self.context = dataSource.context

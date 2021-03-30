@@ -14,6 +14,11 @@ struct CountryDetailViewModelDataSource: ViewModelDataSourceProtocol {
     let country: CountrySummary
 }
 
+enum CountryStorageState {
+    case stored
+    case notStored
+}
+
 final class CountryDetailViewModel: ViewModelProtocol {
     
     typealias DataSource = CountryDetailViewModelDataSource
@@ -24,8 +29,10 @@ final class CountryDetailViewModel: ViewModelProtocol {
     private let dataSource: DataSource
     private let countriesProvider: CountriesProvider
     private let imagesProvider: ImagesProvider
+    private let persistenceProvider: PersistenceProvider
     private let router: Router
     private let numberFormatter = NumberFormatter()
+    private var countryData: CountryDetail?
     let flagImage = Observable<UIImage?>(nil)
     let nativeName = Observable<String?>(nil)
     let capital = Observable<String?>(nil)
@@ -39,6 +46,7 @@ final class CountryDetailViewModel: ViewModelProtocol {
     let timezones = Observable<String?>(nil)
     let currencies = Observable<String?>(nil)
     let borders = MutableObservableArray<BorderCellDataSource>([])
+    let storageState = Observable<CountryStorageState>(.notStored)
 
     init(dataSource: CountryDetailViewModelDataSource, router: CountryDetailRouter) {
         self.context = dataSource.context
@@ -46,6 +54,7 @@ final class CountryDetailViewModel: ViewModelProtocol {
         self.dataSource = dataSource
         self.countriesProvider = dataSource.context.countriesProvider
         self.imagesProvider = dataSource.context.imagesProvider
+        self.persistenceProvider = dataSource.context.persistenceProvider
         self.router = router
         numberFormatter.numberStyle = .decimal
         fetchData()
@@ -54,23 +63,51 @@ final class CountryDetailViewModel: ViewModelProtocol {
     func goBack() {
         router.routeBack()
     }
+    
+    func toggleStorageState() {
+        switch storageState.value {
+        case .stored:
+            if let countryData = countryData {
+                persistenceProvider.deleteCountryData(with: countryData)
+                storageState.value = .notStored
+                fetchData()
+            }
+        case .notStored:
+            if let countryData = countryData {
+                persistenceProvider.storeCountryData(with: countryData)
+                storageState.value = .stored
+                fetchData()
+            }
+        }
+    }
 }
 
 private extension CountryDetailViewModel {
     
     func fetchData() {
         guard let countryCode = country.alpha2Code else { return }
+        guard let countryName = country.name else { return }
+        if let storedCountry = persistenceProvider.retrieveCountry(countryName: countryName) {
+            countryData = storedCountry
+            storageState.value = .stored
+            setupData()
+            return
+        }
         router.displayLoadingIndicator()
         countriesProvider.fetchCountry(countryCode: countryCode) { result in
             self.router.hideLoadingIndicator()
             switch result {
-            case .success(let countryData): self.setupData(countryData: countryData)
+            case .success(let countryData):
+                self.countryData = countryData
+                self.storageState.value = .notStored
+                self.setupData()
             case .failure: ()
             }
         }
     }
     
-    func setupData(countryData: CountryDetail) {
+    func setupData() {
+        guard let countryData = countryData else { return }
         loadImage()
         nativeName.value = countryData.nativeName
         capital.value = countryData.capital
