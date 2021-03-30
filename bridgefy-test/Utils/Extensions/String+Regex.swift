@@ -29,6 +29,19 @@ extension String {
         }
     }
     
+    func languageName() -> String {
+        if let name = (Locale.current as NSLocale).displayName(forKey: .languageCode, value: self) {
+            return name
+        } else {
+            return self
+        }
+    }
+    
+    func currencyName() -> String? {
+        let locale = NSLocale(localeIdentifier: "en_US")
+        return locale.displayName(forKey: .currencyCode, value: self)
+    }
+    
     var isEmail: Bool {
         return matchesRegex(regex: Regex.email)
     }

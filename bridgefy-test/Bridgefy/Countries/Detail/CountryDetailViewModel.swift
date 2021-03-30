@@ -5,7 +5,8 @@
 //  Created by Hugo Jovan Ramírez Cerón on 27/03/21.
 //
 
-import Foundation
+import UIKit
+import Bond
 
 struct CountryDetailViewModelDataSource: ViewModelDataSourceProtocol {
     
@@ -22,14 +23,31 @@ final class CountryDetailViewModel: ViewModelProtocol {
     private(set) var country: CountrySummary
     private let dataSource: DataSource
     private let countriesProvider: CountriesProvider
+    private let imagesProvider: ImagesProvider
     private let router: Router
+    private let numberFormatter = NumberFormatter()
+    let flagImage = Observable<UIImage?>(nil)
+    let nativeName = Observable<String?>(nil)
+    let capital = Observable<String?>(nil)
+    let mapImage = Observable<UIImage?>(nil)
+    let subregion = Observable<String?>(nil)
+    let area = Observable<String?>(nil)
+    let latlng = Observable<String?>(nil)
+    
+    let population = Observable<String?>(nil)
+    let languages = Observable<String?>(nil)
+    let callingCodes = Observable<String?>(nil)
+    let timezones = Observable<String?>(nil)
+    let currencies = Observable<String?>(nil)
     
     init(dataSource: CountryDetailViewModelDataSource, router: CountryDetailRouter) {
         self.context = dataSource.context
         self.country = dataSource.country
         self.dataSource = dataSource
         self.countriesProvider = dataSource.context.countriesProvider
+        self.imagesProvider = dataSource.context.imagesProvider
         self.router = router
+        numberFormatter.numberStyle = .decimal
         fetchData()
     }
     
@@ -53,6 +71,43 @@ private extension CountryDetailViewModel {
     }
     
     func setupData(countryData: CountryDetail) {
-        print(countryData)
+        loadImage()
+        nativeName.value = countryData.nativeName
+        capital.value = countryData.capital
+        if let countryCode = countryData.alpha3Code {
+            mapImage.value = UIImage(named: countryCode)
+        }
+        subregion.value = countryData.subregion
+        area.value = "\(numberFormatter.string(from: NSNumber(value: countryData.area ?? 0)) ?? "-") km²"
+        if let latitudeLongitude = countryData.latlng, latitudeLongitude.count == 2 {
+            latlng.value = "(\(latitudeLongitude[0]), \(latitudeLongitude[1]))"
+        } else {
+            latlng.value = "(-, -)"
+        }
+        population.value = "\(numberFormatter.string(from: NSNumber(value: countryData.population ?? 0)) ?? "-")"
+        if let langs = countryData.languages {
+            languages.value = langs.map { $0.languageName() }.joined(separator: ", ")
+        }
+        if let codes = countryData.callingCodes {
+            callingCodes.value = codes.joined(separator: ", ")
+        }
+        if let times = countryData.timezones {
+            timezones.value = times.joined(separator: "\n")
+        }
+        if let currs = countryData.currencies {
+            currencies.value = currs.map { ($0.currencyName() ?? "") }.joined(separator: ", ")
+        }
+    }
+    
+    func loadImage() {
+        if let countryCode = dataSource.country.alpha2Code {
+            imagesProvider.getFlagImage(countryCode: countryCode) { result in
+                switch result {
+                case .success(let image):
+                    self.flagImage.value = image
+                case .failure: ()
+                }
+            }
+        }
     }
 }

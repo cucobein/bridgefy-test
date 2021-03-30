@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TCZ-WN-fNG">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,33 +24,33 @@
             <objects>
                 <viewController storyboardIdentifier="CountryDetailViewController" id="TCZ-WN-fNG" customClass="CountryDetailViewController" customModule="bridgefy_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RZ9-LB-8KX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oxw-l4-XGV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHn-tn-Okk" userLabel="Content">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="895.33333333333337"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hd5-Z5-kti" userLabel="Flag">
-                                                <rect key="frame" x="67.5" y="16" width="240" height="120"/>
+                                                <rect key="frame" x="87" y="16" width="240" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="PbE-Gp-8Eo"/>
                                                     <constraint firstAttribute="width" constant="240" id="me8-Ix-RLN"/>
                                                 </constraints>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pPA-xN-SVc" userLabel="Name and Capital">
-                                                <rect key="frame" x="132" y="144" width="110" height="52"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pPA-xN-SVc" userLabel="Name and Capital">
+                                                <rect key="frame" x="16" y="144" width="382" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="México" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7h-Cf-gW7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="22"/>
+                                                        <rect key="frame" x="161.66666666666666" y="0.0" width="58.666666666666657" height="21"/>
                                                         <fontDescription key="fontDescription" name="Animosa-Bold" family="Animosa" pointSize="18"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mexico City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-4h-dZt">
-                                                        <rect key="frame" x="0.0" y="30" width="110" height="22"/>
+                                                        <rect key="frame" x="143.33333333333334" y="29" width="95.333333333333343" height="21"/>
                                                         <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -57,16 +58,17 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKk-Dq-8AM" userLabel="Geography" customClass="RoundedCornersView" customModule="bridgefy_test" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="212" width="343" height="120"/>
+                                                <rect key="frame" x="16" y="210" width="382" height="120"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KOJ-hc-F1S">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="120"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="120"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYH-pt-hY5">
-                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="120"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="183" height="120"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mv5-vc-Csm">
-                                                                        <rect key="frame" x="8" y="8" width="147.5" height="104"/>
+                                                                        <rect key="frame" x="8" y="8" width="167" height="104"/>
+                                                                        <color key="tintColor" name="AccentColor"/>
                                                                     </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,23 +81,23 @@
                                                                 </constraints>
                                                             </view>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="miu-qd-Yco">
-                                                                <rect key="frame" x="179.5" y="0.0" width="163.5" height="120"/>
+                                                                <rect key="frame" x="199" y="0.0" width="183" height="120"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Central America" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tel-jS-jxt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="40"/>
-                                                                        <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                                                                        <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,964,375 km2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1P8-Er-8Km">
-                                                                        <rect key="frame" x="0.0" y="40" width="163.5" height="40"/>
-                                                                        <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
+                                                                        <rect key="frame" x="0.0" y="40" width="183" height="40"/>
+                                                                        <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(23.0, -102.0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZg-Ck-RrP">
-                                                                        <rect key="frame" x="0.0" y="80" width="163.5" height="40"/>
-                                                                        <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
+                                                                        <rect key="frame" x="0.0" y="80" width="183" height="40"/>
+                                                                        <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -116,7 +118,7 @@
                                                         <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.10000000000000001"/>
+                                                        <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCornerEnable" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCornerEnable" value="YES"/>
@@ -131,16 +133,16 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7Nx-w6-fWh" userLabel="Demographics">
-                                                <rect key="frame" x="16" y="348" width="343" height="235"/>
+                                                <rect key="frame" x="16" y="346" width="382" height="235"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11T-up-6TD" customClass="RoundedCornersView" customModule="bridgefy_test" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="235"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="203.33333333333334" height="235"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rbg-YF-JDd">
-                                                                <rect key="frame" x="8" y="8" width="165.5" height="219"/>
+                                                                <rect key="frame" x="8" y="8" width="187.33333333333334" height="219"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xMn-9t-65p">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="187.33333333333334" height="30"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Population" translatesAutoresizingMaskIntoConstraints="NO" id="hFs-Mh-MgF">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
@@ -150,44 +152,44 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="121,740,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gm9-Qp-jfs">
-                                                                                <rect key="frame" x="36" y="0.0" width="129.5" height="30"/>
-                                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
+                                                                                <rect key="frame" x="36" y="0.0" width="151.33333333333334" height="30"/>
+                                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
                                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="6Q9-zn-zye">
-                                                                        <rect key="frame" x="0.0" y="84.5" width="165.5" height="43.5"/>
+                                                                        <rect key="frame" x="0.0" y="89" width="187.33333333333334" height="37.333333333333343"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Languages" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-vA-2wY">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="43.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="37.333333333333336"/>
                                                                                 <color key="tintColor" name="AccentColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="20" id="ayW-PV-ELX"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spanish, English, Spanish, English" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sX7-Mz-gIZ">
-                                                                                <rect key="frame" x="36" y="0.0" width="129.5" height="43.5"/>
-                                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
+                                                                                <rect key="frame" x="36" y="0.0" width="151.33333333333334" height="37.333333333333336"/>
+                                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
                                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Sag-KG-wbx">
-                                                                        <rect key="frame" x="0.0" y="175.5" width="165.5" height="43.5"/>
+                                                                        <rect key="frame" x="0.0" y="181.66666666666663" width="187.33333333333334" height="37.333333333333343"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneCode" translatesAutoresizingMaskIntoConstraints="NO" id="cSk-xo-0XI">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="43.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="37.333333333333336"/>
                                                                                 <color key="tintColor" name="AccentColor"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="20" id="32h-LA-Lyg"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spanish, English, Spanish, English" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aX-z2-oax">
-                                                                                <rect key="frame" x="36" y="0.0" width="129.5" height="43.5"/>
-                                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
+                                                                                <rect key="frame" x="36" y="0.0" width="151.33333333333334" height="37.333333333333336"/>
+                                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
                                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -214,7 +216,7 @@
                                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                <real key="value" value="0.10000000000000001"/>
+                                                                <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCornerEnable" value="YES"/>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCornerEnable" value="YES"/>
@@ -223,13 +225,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-0Q-uuz" customClass="RoundedCornersView" customModule="bridgefy_test" customModuleProvider="target">
-                                                        <rect key="frame" x="197.5" y="0.0" width="145.5" height="235"/>
+                                                        <rect key="frame" x="219.33333333333337" y="0.0" width="162.66666666666663" height="235"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="96M-a5-wQL">
-                                                                <rect key="frame" x="8" y="0.0" width="129.5" height="227"/>
+                                                                <rect key="frame" x="8" y="0.0" width="146.66666666666666" height="227"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-72-R4G">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="129.5" height="227"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="227"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Timezones" translatesAutoresizingMaskIntoConstraints="NO" id="ed2-d8-T99">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="227"/>
@@ -239,8 +241,8 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spanish, English, Spanish, English" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azn-Jo-P7D">
-                                                                                <rect key="frame" x="36" y="0.0" width="93.5" height="227"/>
-                                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
+                                                                                <rect key="frame" x="35.999999999999979" y="0.0" width="110.66666666666669" height="227"/>
+                                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="16"/>
                                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
@@ -267,7 +269,7 @@
                                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                <real key="value" value="0.10000000000000001"/>
+                                                                <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCornerEnable" value="YES"/>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCornerEnable" value="YES"/>
@@ -281,23 +283,23 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKO-6V-QYe" userLabel="Currency" customClass="RoundedCornersView" customModule="bridgefy_test" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="599" width="343" height="44"/>
+                                                <rect key="frame" x="16" y="597" width="382" height="89.666666666666629"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ecc-Rv-gK2">
-                                                        <rect key="frame" x="8" y="8" width="327" height="28"/>
+                                                        <rect key="frame" x="8" y="8" width="366" height="73.666666666666671"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dpa-b3-Vlf">
-                                                                <rect key="frame" x="2" y="0.0" width="323.5" height="28"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="73.666666666666671"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Currency" translatesAutoresizingMaskIntoConstraints="NO" id="B1J-2s-AJ3">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="28"/>
+                                                                        <rect key="frame" x="0.0" y="23" width="20" height="28"/>
                                                                         <color key="tintColor" name="AccentColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="jK8-Q3-TZl"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="121,740,000121,740,000121,740,000121,740" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcO-gu-Flj">
-                                                                        <rect key="frame" x="36" y="3" width="287.5" height="22"/>
+                                                                        <rect key="frame" x="36" y="26.333333333333371" width="330" height="21"/>
                                                                         <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="18"/>
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -325,7 +327,72 @@
                                                         <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.10000000000000001"/>
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCornerEnable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCornerEnable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCornerEnable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCornerEnable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D69-Cx-MIx" customClass="RoundedCornersView" customModule="bridgefy_test" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="702.66666666666663" width="382" height="184.66666666666663"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ydu-mM-8FP">
+                                                        <rect key="frame" x="8" y="8" width="366" height="168.66666666666666"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN2-qd-sEf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="366" height="24.666666666666668"/>
+                                                                <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="21"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cTJ-Vm-3cJ">
+                                                                <rect key="frame" x="0.0" y="40.666666666666742" width="366" height="128"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z6O-20-GAM">
+                                                                    <size key="itemSize" width="64" height="64"/>
+                                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                </collectionViewFlowLayout>
+                                                                <cells>
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XNt-o0-JeG">
+                                                                        <rect key="frame" x="0.0" y="32" width="64" height="64"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9XT-ms-3Mj">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                        </collectionViewCellContentView>
+                                                                    </collectionViewCell>
+                                                                </cells>
+                                                            </collectionView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="cTJ-Vm-3cJ" secondAttribute="trailing" id="68e-d0-a41"/>
+                                                            <constraint firstItem="cTJ-Vm-3cJ" firstAttribute="leading" secondItem="Ydu-mM-8FP" secondAttribute="leading" id="Jfd-zk-u26"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Ydu-mM-8FP" secondAttribute="bottom" constant="8" id="7HC-id-utB"/>
+                                                    <constraint firstItem="Ydu-mM-8FP" firstAttribute="leading" secondItem="D69-Cx-MIx" secondAttribute="leading" constant="8" id="Awm-qj-d5P"/>
+                                                    <constraint firstItem="Ydu-mM-8FP" firstAttribute="top" secondItem="D69-Cx-MIx" secondAttribute="top" constant="8" id="H3w-TX-nO0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ydu-mM-8FP" secondAttribute="trailing" constant="8" id="Qln-X9-mmH"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCornerEnable" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCornerEnable" value="YES"/>
@@ -337,19 +404,25 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="7Nx-w6-fWh" firstAttribute="leading" secondItem="wHn-tn-Okk" secondAttribute="leading" constant="16" id="55i-LD-BLX"/>
+                                            <constraint firstItem="D69-Cx-MIx" firstAttribute="top" secondItem="sKO-6V-QYe" secondAttribute="bottom" constant="16" id="BFl-ws-z6o"/>
                                             <constraint firstAttribute="trailing" secondItem="7Nx-w6-fWh" secondAttribute="trailing" constant="16" id="Dsc-8I-Khb"/>
+                                            <constraint firstItem="D69-Cx-MIx" firstAttribute="top" secondItem="wHn-tn-Okk" secondAttribute="top" constant="702.66666666666652" placeholder="YES" id="Fi0-ga-HOT"/>
                                             <constraint firstItem="BKk-Dq-8AM" firstAttribute="top" secondItem="pPA-xN-SVc" secondAttribute="bottom" constant="16" id="Fvx-io-t9p"/>
                                             <constraint firstAttribute="trailing" secondItem="BKk-Dq-8AM" secondAttribute="trailing" constant="16" id="H4e-pF-P3U"/>
                                             <constraint firstItem="pPA-xN-SVc" firstAttribute="top" secondItem="Hd5-Z5-kti" secondAttribute="bottom" constant="8" id="Ht1-bI-VmY"/>
                                             <constraint firstItem="Hd5-Z5-kti" firstAttribute="centerX" secondItem="wHn-tn-Okk" secondAttribute="centerX" id="Jdh-7y-WST"/>
-                                            <constraint firstItem="pPA-xN-SVc" firstAttribute="leading" secondItem="wHn-tn-Okk" secondAttribute="leading" constant="132" id="Nio-sL-zZW"/>
+                                            <constraint firstAttribute="trailing" secondItem="D69-Cx-MIx" secondAttribute="trailing" constant="16" id="KTf-3T-8dX"/>
+                                            <constraint firstItem="D69-Cx-MIx" firstAttribute="leading" secondItem="wHn-tn-Okk" secondAttribute="leading" constant="16" id="NQA-L8-zO4"/>
+                                            <constraint firstItem="pPA-xN-SVc" firstAttribute="leading" secondItem="wHn-tn-Okk" secondAttribute="leading" constant="16" id="Nio-sL-zZW"/>
                                             <constraint firstItem="sKO-6V-QYe" firstAttribute="top" secondItem="7Nx-w6-fWh" secondAttribute="bottom" constant="16" id="QZR-5t-A4S"/>
                                             <constraint firstItem="7Nx-w6-fWh" firstAttribute="top" secondItem="BKk-Dq-8AM" secondAttribute="bottom" constant="16" id="Ua8-9g-Kpp"/>
+                                            <constraint firstAttribute="bottom" secondItem="D69-Cx-MIx" secondAttribute="bottom" constant="8.0000000000001137" id="YI6-a9-TxI"/>
                                             <constraint firstAttribute="trailing" secondItem="sKO-6V-QYe" secondAttribute="trailing" constant="16" id="eEl-4X-fqv"/>
-                                            <constraint firstAttribute="trailing" secondItem="pPA-xN-SVc" secondAttribute="trailing" constant="133" id="fBg-zL-XI6"/>
+                                            <constraint firstAttribute="trailing" secondItem="pPA-xN-SVc" secondAttribute="trailing" constant="16" id="fBg-zL-XI6"/>
                                             <constraint firstItem="sKO-6V-QYe" firstAttribute="leading" secondItem="wHn-tn-Okk" secondAttribute="leading" constant="16" id="tGD-pt-LGV"/>
                                             <constraint firstItem="BKk-Dq-8AM" firstAttribute="leading" secondItem="wHn-tn-Okk" secondAttribute="leading" constant="16" id="wGP-JV-fPC"/>
                                             <constraint firstItem="Hd5-Z5-kti" firstAttribute="top" secondItem="wHn-tn-Okk" secondAttribute="top" constant="16" id="wMe-D1-NVa"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="D69-Cx-MIx" secondAttribute="bottom" constant="8" id="zsI-JL-ZE9"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -374,6 +447,20 @@
                             <constraint firstItem="oxw-l4-XGV" firstAttribute="top" secondItem="aWn-Tx-Su1" secondAttribute="top" id="pt8-pH-OxS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="areaLabel" destination="1P8-Er-8Km" id="yjJ-30-Q4y"/>
+                        <outlet property="callingCodesLabel" destination="4aX-z2-oax" id="cpz-fd-UWo"/>
+                        <outlet property="capitalLabel" destination="tCn-4h-dZt" id="8qK-Mt-54C"/>
+                        <outlet property="currenciesLabel" destination="FcO-gu-Flj" id="U2t-lE-gzN"/>
+                        <outlet property="flagImageView" destination="Hd5-Z5-kti" id="A0q-qv-fVK"/>
+                        <outlet property="languagesLabel" destination="sX7-Mz-gIZ" id="f3Q-2n-md0"/>
+                        <outlet property="latlngLabel" destination="rZg-Ck-RrP" id="Rr8-kv-WE0"/>
+                        <outlet property="mapImageView" destination="Mv5-vc-Csm" id="Qfq-G5-dH2"/>
+                        <outlet property="nativeNameLabel" destination="i7h-Cf-gW7" id="6bo-04-IRV"/>
+                        <outlet property="populationLabel" destination="gm9-Qp-jfs" id="nFi-sv-OKp"/>
+                        <outlet property="subregionLabel" destination="Tel-jS-jxt" id="QUY-kY-YjC"/>
+                        <outlet property="timezonesLabel" destination="Azn-Jo-P7D" id="oW8-li-xW4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0J-La-jcM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

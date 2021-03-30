@@ -12,6 +12,19 @@ final class CountryDetailViewController: UIViewController, ViewControllerProtoco
     
     typealias ViewModel = CountryDetailViewModel
 
+    @IBOutlet private weak var flagImageView: UIImageView!
+    @IBOutlet private weak var nativeNameLabel: UILabel!
+    @IBOutlet private weak var capitalLabel: UILabel!
+    @IBOutlet private weak var mapImageView: UIImageView!
+    @IBOutlet private weak var subregionLabel: UILabel!
+    @IBOutlet private weak var areaLabel: UILabel!
+    @IBOutlet private weak var latlngLabel: UILabel!
+    @IBOutlet private weak var populationLabel: UILabel!
+    @IBOutlet private weak var languagesLabel: UILabel!
+    @IBOutlet private weak var callingCodesLabel: UILabel!
+    @IBOutlet private weak var timezonesLabel: UILabel!
+    @IBOutlet private weak var currenciesLabel: UILabel!
+    
     private var viewModel: CountryDetailViewModel!
     
     override func viewDidLoad() {
@@ -38,5 +51,46 @@ private extension CountryDetailViewController {
     }
     
     func bindViews() {
+        _ = viewModel.flagImage.observeNext { [weak self] in
+            if let image = $0 {
+                self?.flagImageView.image = image
+            }
+        }
+        _ = viewModel.nativeName.observeNext { [weak self] in
+            self?.nativeNameLabel.text = $0
+        }
+        _ = viewModel.capital.observeNext { [weak self] in
+            self?.capitalLabel.text = $0
+        }
+        _ = viewModel.mapImage.observeNext { [weak self] in
+            if let image = $0 {
+                self?.mapImageView.image = image
+            }
+        }
+        _ = viewModel.subregion.observeNext { [weak self] in
+            self?.subregionLabel.text = $0
+        }
+        _ = viewModel.area.observeNext { [weak self] in
+            self?.areaLabel.text = $0
+        }
+        _ = viewModel.latlng.observeNext { [weak self] in
+            self?.latlngLabel.text = $0
+        }
+        _ = viewModel.population.observeNext { [weak self] in
+            self?.populationLabel.text = $0
+        }
+        _ = viewModel.languages.observeNext { [weak self] in
+            self?.languagesLabel.text = $0
+        }
+        _ = viewModel.callingCodes.observeNext { [weak self] in
+            self?.callingCodesLabel.text = $0
+        }
+        _ = viewModel.timezones.observeNext { [weak self] in
+            self?.timezonesLabel.text = $0
+        }
+        _ = viewModel.currencies.observeNext { [weak self] in
+            self?.currenciesLabel.text = $0
+        }
+        
     }
 }
