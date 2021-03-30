@@ -33,13 +33,13 @@ final class CountryDetailViewModel: ViewModelProtocol {
     let subregion = Observable<String?>(nil)
     let area = Observable<String?>(nil)
     let latlng = Observable<String?>(nil)
-    
     let population = Observable<String?>(nil)
     let languages = Observable<String?>(nil)
     let callingCodes = Observable<String?>(nil)
     let timezones = Observable<String?>(nil)
     let currencies = Observable<String?>(nil)
-    
+    let borders = MutableObservableArray<BorderCellDataSource>([])
+
     init(dataSource: CountryDetailViewModelDataSource, router: CountryDetailRouter) {
         self.context = dataSource.context
         self.country = dataSource.country
@@ -96,6 +96,12 @@ private extension CountryDetailViewModel {
         }
         if let currs = countryData.currencies {
             currencies.value = currs.map { ($0.currencyName() ?? "") }.joined(separator: ", ")
+        }
+        if let bord = countryData.borders {
+            let borderList = bord.map({ countryCode -> BorderCellDataSource in
+                return BorderCellDataSource(context: context, countryCode: countryCode)
+            })
+            borders.replace(with: borderList)
         }
     }
     

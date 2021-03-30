@@ -24,6 +24,7 @@ final class CountryDetailViewController: UIViewController, ViewControllerProtoco
     @IBOutlet private weak var callingCodesLabel: UILabel!
     @IBOutlet private weak var timezonesLabel: UILabel!
     @IBOutlet private weak var currenciesLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     private var viewModel: CountryDetailViewModel!
     
@@ -48,6 +49,7 @@ private extension CountryDetailViewController {
         })
         navigationItem.title = viewModel.country.name
         hidesBottomBarWhenPushed = true
+        collectionView.register(UINib(nibName: "BorderCell", bundle: .main), forCellWithReuseIdentifier: "BorderCell")
     }
     
     func bindViews() {
@@ -90,6 +92,9 @@ private extension CountryDetailViewController {
         }
         _ = viewModel.currencies.observeNext { [weak self] in
             self?.currenciesLabel.text = $0
+        }
+        viewModel.borders.bind(to: collectionView, cellType: BorderCell.self) {
+            $0.configure(with: $1)
         }
     }
 }

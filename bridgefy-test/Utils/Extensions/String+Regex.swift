@@ -42,6 +42,14 @@ extension String {
         return locale.displayName(forKey: .currencyCode, value: self)
     }
     
+    func countryName() -> String {
+        if let name = (Locale.current as NSLocale).displayName(forKey: .countryCode, value: self) {
+            return name
+        } else {
+            return self
+        }
+    }
+    
     func flagEmoji() -> String {
         let base: UInt32 = 127397
         var stringBuilder = ""

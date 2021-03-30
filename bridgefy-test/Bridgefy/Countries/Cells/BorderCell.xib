@@ -1,22 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Animosa-Regular.ttf">
+            <string>Animosa-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BorderCell" customModule="bridgefy_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5V-rh-mmB">
+                    <rect key="frame" x="0.0" y="0.0" width="128" height="64"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" id="KHU-H1-opw">
+                            <rect key="frame" x="-37" y="1" width="200.5" height="61"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇲🇽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvd-C2-brl">
+                                    <rect key="frame" x="84.5" y="0.0" width="32" height="41"/>
+                                    <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="32"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abcdefghijklmno" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2n2-bz-kdF">
+                                    <rect key="frame" x="58.5" y="45" width="83.5" height="16"/>
+                                    <fontDescription key="fontDescription" name="Animosa-Regular" family="Animosa" pointSize="12"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="a5V-rh-mmB" secondAttribute="trailing" id="0NO-yi-Ltu"/>
+                <constraint firstAttribute="leading" secondItem="a5V-rh-mmB" secondAttribute="leading" id="aZ4-xX-Cxi"/>
+                <constraint firstAttribute="top" secondItem="a5V-rh-mmB" secondAttribute="top" id="fWB-Nh-vKw"/>
+                <constraint firstItem="a5V-rh-mmB" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="gL5-a9-IIQ"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="flagLabel" destination="dvd-C2-brl" id="N5v-hn-1we"/>
+                <outlet property="nameLabel" destination="2n2-bz-kdF" id="CqZ-ez-0s1"/>
+            </connections>
             <point key="canvasLocation" x="86" y="90"/>
         </view>
     </objects>
