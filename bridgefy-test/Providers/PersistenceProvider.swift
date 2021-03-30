@@ -57,40 +57,28 @@ class PersistenceProvider {
             country.alpha2Code = countryData.alpha2Code
             country.alpha3Code = countryData.alpha3Code
             if let callingCodes = countryData.callingCodes {
-                let codes = List<String>()
-                codes.append(objectsIn: callingCodes)
-                country.callingCodes = codes
+                country.callingCodes.append(objectsIn: callingCodes)
             }
             country.capital = countryData.capital
             country.region = countryData.region
             country.subregion = countryData.subregion
             country.population = countryData.population ?? 0
             if let location = countryData.latlng {
-                let coordinates = List<Double>()
-                coordinates.append(objectsIn: location)
-                country.latlng = coordinates
+                country.latlng.append(objectsIn: location)
             }
             country.area = countryData.area ?? 0
             if let timezones = countryData.timezones {
-                let times = List<String>()
-                times.append(objectsIn: timezones)
-                country.timezones = times
+                country.timezones.append(objectsIn: timezones)
             }
             if let borders = countryData.borders {
-                let brds = List<String>()
-                brds.append(objectsIn: borders)
-                country.timezones = brds
+                country.borders.append(objectsIn: borders)
             }
             country.nativeName = countryData.nativeName
             if let currencies = countryData.currencies {
-                let curr = List<String>()
-                curr.append(objectsIn: currencies)
-                country.timezones = curr
+                country.currencies.append(objectsIn: currencies)
             }
             if let languages = countryData.languages {
-                let langs = List<String>()
-                langs.append(objectsIn: languages)
-                country.timezones = langs
+                country.languages.append(objectsIn: languages)
             }
             try database.write {
                 database.add(country)
@@ -119,48 +107,22 @@ class PersistenceProvider {
         guard let storedCountry = storedCountries.value?.first(where: { country -> Bool in
             country.name == countryName
         }) else { return nil }
-        
-        var callingCodes: [String]?
-        if let codes = storedCountry.callingCodes {
-            callingCodes = Array(codes)
-        }
-        var latlng: [Double]?
-        if let location = storedCountry.latlng {
-            latlng = Array(location)
-        }
-        var timezones: [String]?
-        if let times = storedCountry.timezones {
-            timezones = Array(times)
-        }
-        var borders: [String]?
-        if let bords = storedCountry.borders {
-            borders = Array(bords)
-        }
-        var currencies: [String]?
-        if let currs = storedCountry.currencies {
-            currencies = Array(currs)
-        }
-        var languages: [String]?
-        if let langs = storedCountry.languages {
-            languages = Array(langs)
-        }
-
         let country = CountryDetail(
             name: storedCountry.name,
             alpha2Code: storedCountry.alpha2Code,
             alpha3Code: storedCountry.alpha3Code,
-            callingCodes: callingCodes,
+            callingCodes: Array(storedCountry.callingCodes),
             capital: storedCountry.capital,
             region: storedCountry.region,
             subregion: storedCountry.subregion,
             population: storedCountry.population,
-            latlng: latlng,
+            latlng: Array(storedCountry.latlng),
             area: storedCountry.area,
-            timezones: timezones,
-            borders: borders,
+            timezones: Array(storedCountry.timezones),
+            borders: Array(storedCountry.borders),
             nativeName: storedCountry.nativeName,
-            currencies: currencies,
-            languages: languages
+            currencies: Array(storedCountry.currencies),
+            languages: Array(storedCountry.languages)
         )
         return country
     }

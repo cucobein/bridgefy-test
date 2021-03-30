@@ -46,7 +46,17 @@ private extension CountryDetailViewController {
             self.viewModel.goBack()
         })
         navigationItem.rightBarButtonItem = .textBarButtonItem(title: "Save", color: .bridgefyRed, tapHandler: {
-            self.viewModel.toggleStorageState()
+            let message = self.viewModel.storageState.value == .stored ?
+                "Do you want to delete this?" :
+                "Do you want to store this?"
+            let refreshAlert = UIAlertController(title: "Hey!", message: message, preferredStyle: .actionSheet)
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+                self.viewModel.toggleStorageState()
+            }))
+            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+                print("Handle Cancel Logic here")
+            }))
+            self.present(refreshAlert, animated: true, completion: nil)
         })
         navigationItem.title = viewModel.country.name
         hidesBottomBarWhenPushed = true

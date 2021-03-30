@@ -13,16 +13,16 @@ class StoredCountry: Object {
     @objc dynamic var name: String?
     @objc dynamic var alpha2Code: String?
     @objc dynamic var alpha3Code: String?
-    var callingCodes = List<String>?(nil)
+    let callingCodes = List<String>()
     @objc dynamic var capital: String?
     @objc dynamic var region: String?
     @objc dynamic var subregion: String?
     @objc dynamic var population: Int = 0
-    var latlng = List<Double>?(nil)
+    let latlng = List<Double>()
     @objc dynamic var area: Double = 0.0
-    var timezones = List<String>?(nil)
-    var borders = List<String>?(nil)
+    let timezones = List<String>()
+    let borders = List<String>()
     @objc dynamic var nativeName: String?
-    var currencies = List<String>?(nil)
-    var languages = List<String>?(nil)
+    let currencies = List<String>()
+    let languages = List<String>()
 }
