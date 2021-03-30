@@ -42,6 +42,15 @@ extension String {
         return locale.displayName(forKey: .currencyCode, value: self)
     }
     
+    func flagEmoji() -> String {
+        let base: UInt32 = 127397
+        var stringBuilder = ""
+        for scalar in self.unicodeScalars {
+            stringBuilder.unicodeScalars.append(UnicodeScalar(base + scalar.value)!)
+        }
+        return String(stringBuilder)
+    }
+    
     var isEmail: Bool {
         return matchesRegex(regex: Regex.email)
     }

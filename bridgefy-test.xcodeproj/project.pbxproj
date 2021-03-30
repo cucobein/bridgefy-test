@@ -85,6 +85,8 @@
 		FD3B6EA22611694E009BCD1B /* AlphaTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6EA12611694E009BCD1B /* AlphaTransition.swift */; };
 		FD3B6EA726116B49009BCD1B /* UIColor+Bridgefy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6EA626116B49009BCD1B /* UIColor+Bridgefy.swift */; };
 		FD3B6EAB26116BE4009BCD1B /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6EAA26116BE4009BCD1B /* TabBarViewModel.swift */; };
+		FD3DE4B726130B5A0095820E /* BorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3DE4B626130B5A0095820E /* BorderCell.swift */; };
+		FD3DE4BA26130B6D0095820E /* BorderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3DE4B926130B6D0095820E /* BorderCell.xib */; };
 		FD859BF3260EF33C00DF9F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */; };
 		FD859BFC260EF33D00DF9F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD859BFB260EF33D00DF9F86 /* Assets.xcassets */; };
 		FD9FD9FB26118697000227F3 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FD9FA26118697000227F3 /* UIBarButtonItem+Extensions.swift */; };
@@ -173,6 +175,8 @@
 		FD3B6EA12611694E009BCD1B /* AlphaTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaTransition.swift; sourceTree = "<group>"; };
 		FD3B6EA626116B49009BCD1B /* UIColor+Bridgefy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Bridgefy.swift"; sourceTree = "<group>"; };
 		FD3B6EAA26116BE4009BCD1B /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		FD3DE4B626130B5A0095820E /* BorderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderCell.swift; sourceTree = "<group>"; };
+		FD3DE4B926130B6D0095820E /* BorderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderCell.xib; sourceTree = "<group>"; };
 		FD859BEF260EF33C00DF9F86 /* bridgefy-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bridgefy-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD859BFB260EF33D00DF9F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -503,6 +507,8 @@
 			children = (
 				FD9FDA092611A0C0000227F3 /* CountryCell.swift */,
 				FD9FDA132611A429000227F3 /* CountryCell.xib */,
+				FD3DE4B626130B5A0095820E /* BorderCell.swift */,
+				FD3DE4B926130B6D0095820E /* BorderCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 				FD3B6DFA260FED13009BCD1B /* LoginViewController.storyboard in Resources */,
 				FD859BFC260EF33D00DF9F86 /* Assets.xcassets in Resources */,
 				FD3B6DEA260FEC26009BCD1B /* Animosa-Light.ttf in Resources */,
+				FD3DE4BA26130B6D0095820E /* BorderCell.xib in Resources */,
 				FD3B6E262610164C009BCD1B /* DevicesViewController.storyboard in Resources */,
 				FD3B6E1726101143009BCD1B /* CountryDetailViewController.storyboard in Resources */,
 			);
@@ -672,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3B6DEF260FECDA009BCD1B /* LoginViewController.swift in Sources */,
+				FD3DE4B726130B5A0095820E /* BorderCell.swift in Sources */,
 				FD3B6DA9260EFB57009BCD1B /* AuthenticationProvider.swift in Sources */,
 				FD3B6E542610DD2F009BCD1B /* User.swift in Sources */,
 				FD3B6D80260EF9A1009BCD1B /* AppCoordinator.swift in Sources */,

@@ -91,6 +91,5 @@ private extension CountryDetailViewController {
         _ = viewModel.currencies.observeNext { [weak self] in
             self?.currenciesLabel.text = $0
         }
-        
     }
 }
