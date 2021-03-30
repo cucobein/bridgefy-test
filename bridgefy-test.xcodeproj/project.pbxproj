@@ -87,6 +87,7 @@
 		FD3B6EAB26116BE4009BCD1B /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6EAA26116BE4009BCD1B /* TabBarViewModel.swift */; };
 		FD3DE4B726130B5A0095820E /* BorderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3DE4B626130B5A0095820E /* BorderCell.swift */; };
 		FD3DE4BA26130B6D0095820E /* BorderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3DE4B926130B6D0095820E /* BorderCell.xib */; };
+		FD3DE4BE2613709E0095820E /* StoredCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3DE4BD2613709E0095820E /* StoredCountry.swift */; };
 		FD859BF3260EF33C00DF9F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */; };
 		FD859BFC260EF33D00DF9F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD859BFB260EF33D00DF9F86 /* Assets.xcassets */; };
 		FD9FD9FB26118697000227F3 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FD9FA26118697000227F3 /* UIBarButtonItem+Extensions.swift */; };
@@ -177,6 +178,7 @@
 		FD3B6EAA26116BE4009BCD1B /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		FD3DE4B626130B5A0095820E /* BorderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderCell.swift; sourceTree = "<group>"; };
 		FD3DE4B926130B6D0095820E /* BorderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BorderCell.xib; sourceTree = "<group>"; };
+		FD3DE4BD2613709E0095820E /* StoredCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredCountry.swift; sourceTree = "<group>"; };
 		FD859BEF260EF33C00DF9F86 /* bridgefy-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bridgefy-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD859BF2260EF33C00DF9F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD859BFB260EF33D00DF9F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				FD3B6E532610DD2F009BCD1B /* User.swift */,
+				FD3DE4BD2613709E0095820E /* StoredCountry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				FD9FDA1A2611B075000227F3 /* ApplicationDelegate.swift in Sources */,
 				FD9FD9FE26119CCA000227F3 /* CountriesResource.swift in Sources */,
 				FD3B6D96260EFA84009BCD1B /* Endpoint.swift in Sources */,
+				FD3DE4BE2613709E0095820E /* StoredCountry.swift in Sources */,
 				FD3B6E7B26115A58009BCD1B /* UIViewController+Loading.swift in Sources */,
 				FD3B6E0A26100FC1009BCD1B /* CountriesViewController.swift in Sources */,
 				FD3B6E3D26101AA1009BCD1B /* KeyValueStorage.swift in Sources */,

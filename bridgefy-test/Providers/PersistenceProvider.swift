@@ -21,6 +21,7 @@ class PersistenceProvider {
             Data(buffer: buffer)
         }
     }
+    private(set) var storedCountries = Observable<[StoredCountry]?>(nil)
 
     init(keyValueStorage: KeyValueStorage) {
         self.keyValueStorage = keyValueStorage
@@ -34,107 +35,138 @@ class PersistenceProvider {
         }
         do {
             database = try Realm(configuration: configuration)
-            //loadObjects()
+            loadObjects()
         } catch {
             do {
                 configuration.deleteRealmIfMigrationNeeded = true
                 database = try Realm(configuration: configuration)
-                //loadObjects()
+                loadObjects()
             } catch {
                 fatalError("Unable to load database: \(error)")
             }
         }
     }
     
-//    func storeUserProfile(with userData: UserData) {
-//        guard userProfile.value == nil else { return }
-//        let userProfile = UserProfile()
-//        userProfile.name = userData.name ?? ""
-//        userProfile.userName = userData.userName ?? ""
-//        userProfile.profilePicture = userData.profilePicture ?? ""
-//        userProfile.biography = userData.biography ?? ""
-//        userProfile.followers = userData.followers ?? 0
-//        userProfile.followed = userData.followed ?? 0
-//        userProfile.views = userData.views ?? 0
-//        do {
-//            try database.write {
-//                database.add(userProfile)
-//            }
-//            self.userProfile.value = userProfile
-//        } catch {
-//            fatalError("Unable to save in database: \(error)")
-//        }
-//    }
-//
-//    func updateUserProfileWith(name: String, username: String, bio: String, selectedImage: Data?) {
-//        guard let currentUser = userProfile.value else { return }
-//        let userProfile = UserProfile()
-//        userProfile.name = name
-//        userProfile.userName = username
-//        userProfile.profilePicture = currentUser.profilePicture
-//        userProfile.biography = bio
-//        userProfile.followers = currentUser.followers
-//        userProfile.followed = currentUser.followed
-//        userProfile.views = currentUser.views
-//        if selectedImage != nil {
-//            userProfile.selectedImageData = selectedImage
-//        } else {
-//            userProfile.selectedImageData = currentUser.selectedImageData
-//        }
-//
-//        do {
-//
-//            try database.write {
-//                database.delete(database.objects(UserProfile.self))
-//                database.add(userProfile)
-//            }
-//            self.userProfile.value = userProfile
-//        } catch {
-//            fatalError("Unable to save in database: \(error)")
-//        }
-//    }
-//
-//    func storeUserVideos(with dataOfVideos: [VideoData]) {
-//        if let vids = userVideos.value, !vids.isEmpty {
-//            return
-//        }
-//        var userVideos = [UserVideo]()
-//        for videoData in dataOfVideos {
-//            let userVideo = UserVideo()
-//            userVideo.name = videoData.user?.name ?? ""
-//            userVideo.userName = videoData.user?.userName ?? ""
-//            userVideo.profilePicture = videoData.user?.profilePicture ?? ""
-//            userVideo.songName = videoData.songName ?? ""
-//            userVideo.recordVideo = videoData.recordVideo ?? ""
-//            userVideo.previewImg = videoData.previewImg ?? ""
-//            userVideo.likes = videoData.likes ?? 0
-//            userVideo.liked = false
-//            userVideos.append(userVideo)
-//        }
-//        database.beginWrite()
-//        do {
-//            userVideos.forEach { database.add($0) }
-//            try database.commitWrite()
-//            self.userVideos.value = userVideos
-//        } catch {
-//            fatalError("Unable to save in database: \(error)")
-//        }
-//    }
-//
+    func storeCountryData(with countryData: CountryDetail) {
+        if let existing = storedCountries.value?.contains(where: { country -> Bool in
+            country.name == countryData.name
+        }), existing { return }
+        do {
+            let country = StoredCountry()
+            country.name = countryData.name
+            country.alpha2Code = countryData.alpha2Code
+            country.alpha3Code = countryData.alpha3Code
+            if let callingCodes = countryData.callingCodes {
+                let codes = List<String>()
+                codes.append(objectsIn: callingCodes)
+                country.callingCodes = codes
+            }
+            country.capital = countryData.capital
+            country.region = countryData.region
+            country.subregion = countryData.subregion
+            country.population = countryData.population ?? 0
+            if let location = countryData.latlng {
+                let coordinates = List<Double>()
+                coordinates.append(objectsIn: location)
+                country.latlng = coordinates
+            }
+            country.area = countryData.area ?? 0
+            if let timezones = countryData.timezones {
+                let times = List<String>()
+                times.append(objectsIn: timezones)
+                country.timezones = times
+            }
+            if let borders = countryData.borders {
+                let brds = List<String>()
+                brds.append(objectsIn: borders)
+                country.timezones = brds
+            }
+            country.nativeName = countryData.nativeName
+            if let currencies = countryData.currencies {
+                let curr = List<String>()
+                curr.append(objectsIn: currencies)
+                country.timezones = curr
+            }
+            if let languages = countryData.languages {
+                let langs = List<String>()
+                langs.append(objectsIn: languages)
+                country.timezones = langs
+            }
+            try database.write {
+                database.add(country)
+            }
+        } catch {
+            fatalError("Unable to save in database: \(error)")
+        }
+    }
+    
+    func deleteCountryData(with countryData: CountryDetail) {
+        guard let country = storedCountries.value?.first(where: { country -> Bool in
+            country.name == countryData.name
+        }) else { return }
+        do {
+            try database.write {
+                database.delete(country)
+            }
+        } catch {
+            fatalError("Unable to save in database: \(error)")
+        }
+    }
+    
+    func retrieveCountry(countryName: String) -> CountryDetail? {
+        guard let storedCountry = storedCountries.value?.first(where: { country -> Bool in
+            country.name == countryName
+        }) else { return nil }
+        
+        var callingCodes: [String]?
+        if let codes = storedCountry.callingCodes {
+            callingCodes = Array(codes)
+        }
+        var latlng: [Double]?
+        if let location = storedCountry.latlng {
+            latlng = Array(location)
+        }
+        var timezones: [String]?
+        if let times = storedCountry.timezones {
+            timezones = Array(times)
+        }
+        var borders: [String]?
+        if let bords = storedCountry.borders {
+            borders = Array(bords)
+        }
+        var currencies: [String]?
+        if let currs = storedCountry.currencies {
+            currencies = Array(currs)
+        }
+        var languages: [String]?
+        if let langs = storedCountry.languages {
+            languages = Array(langs)
+        }
+
+        let country = CountryDetail(
+            name: storedCountry.name,
+            alpha2Code: storedCountry.alpha2Code,
+            alpha3Code: storedCountry.alpha3Code,
+            callingCodes: callingCodes,
+            capital: storedCountry.capital,
+            region: storedCountry.region,
+            subregion: storedCountry.subregion,
+            population: storedCountry.population,
+            latlng: latlng,
+            area: storedCountry.area,
+            timezones: timezones,
+            borders: borders,
+            nativeName: storedCountry.nativeName,
+            currencies: currencies,
+            languages: languages
+        )
+        return country
+    }
 }
 
 private extension PersistenceProvider {
     
-//    func loadObjects() {
-//        retrieveUserProfile()
-//        retrieveUserVideos()
-//    }
-//
-//    func retrieveUserProfile() {
-//        userProfile = Observable(database.objects(UserProfile.self).first)
-//    }
-//
-//    func retrieveUserVideos() {
-//        userVideos = Observable(Array(database.objects(UserVideo.self)))
-//    }
+    func loadObjects() {
+        storedCountries = Observable(Array(database.objects(StoredCountry.self)))
+    }
 }
