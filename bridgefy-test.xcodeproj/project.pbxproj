@@ -72,7 +72,7 @@
 		FD3B6E672610F94B009BCD1B /* UITextField+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E662610F94B009BCD1B /* UITextField+Helpers.swift */; };
 		FD3B6E702610FD55009BCD1B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD3B6E6F2610FD55009BCD1B /* IQKeyboardManagerSwift */; };
 		FD3B6E732611002B009BCD1B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E722611002B009BCD1B /* RoundedButton.swift */; };
-		FD3B6E782611598D009BCD1B /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E772611598D009BCD1B /* String+Regex.swift */; };
+		FD3B6E782611598D009BCD1B /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E772611598D009BCD1B /* String+Helpers.swift */; };
 		FD3B6E7B26115A58009BCD1B /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E7A26115A58009BCD1B /* UIViewController+Loading.swift */; };
 		FD3B6E8226115AA5009BCD1B /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E8126115AA5009BCD1B /* LoadingViewController.swift */; };
 		FD3B6E8626115ADA009BCD1B /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6E8526115ADA009BCD1B /* UIView+Autolayout.swift */; };
@@ -163,7 +163,7 @@
 		FD3B6E612610F261009BCD1B /* InputRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputRow.xib; sourceTree = "<group>"; };
 		FD3B6E662610F94B009BCD1B /* UITextField+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Helpers.swift"; sourceTree = "<group>"; };
 		FD3B6E722611002B009BCD1B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		FD3B6E772611598D009BCD1B /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
+		FD3B6E772611598D009BCD1B /* String+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		FD3B6E7A26115A58009BCD1B /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		FD3B6E8126115AA5009BCD1B /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		FD3B6E8526115ADA009BCD1B /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI\U0010View+Autolayout.swift"; sourceTree = "<group>"; };
@@ -240,7 +240,6 @@
 			children = (
 				FD3B6DCD260F016B009BCD1B /* Protocols */,
 				FD3B6DD1260F0188009BCD1B /* Extensions */,
-				FD3B6E582610E237009BCD1B /* Helpers */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -321,12 +320,13 @@
 				FD3B6DD2260F01A6009BCD1B /* UIFont+Helpers.swift */,
 				FD3B6DD6260F01C4009BCD1B /* Data+Helpers.swift */,
 				FD3B6DD9260F0201009BCD1B /* Error+Code.swift */,
-				FD3B6E772611598D009BCD1B /* String+Regex.swift */,
+				FD3B6E772611598D009BCD1B /* String+Helpers.swift */,
 				FD3B6E7A26115A58009BCD1B /* UIViewController+Loading.swift */,
 				FD3B6E8526115ADA009BCD1B /* UIView+Autolayout.swift */,
 				FD3B6EA626116B49009BCD1B /* UIColor+Bridgefy.swift */,
 				FD9FD9FA26118697000227F3 /* UIBarButtonItem+Extensions.swift */,
 				FD9FDA0026119D6A000227F3 /* URLRequest+Helpers.swift */,
+				FD3B6E592610E258009BCD1B /* KeychainHelper.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,14 +400,6 @@
 				FD9FDA0F2611A173000227F3 /* ImagesProvider.swift */,
 			);
 			path = Providers;
-			sourceTree = "<group>";
-		};
-		FD3B6E582610E237009BCD1B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				FD3B6E592610E258009BCD1B /* KeychainHelper.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FD3B6E5D2610E34E009BCD1B /* Inputs */ = {
@@ -696,7 +688,7 @@
 				FD3B6E7B26115A58009BCD1B /* UIViewController+Loading.swift in Sources */,
 				FD3B6E0A26100FC1009BCD1B /* CountriesViewController.swift in Sources */,
 				FD3B6E3D26101AA1009BCD1B /* KeyValueStorage.swift in Sources */,
-				FD3B6E782611598D009BCD1B /* String+Regex.swift in Sources */,
+				FD3B6E782611598D009BCD1B /* String+Helpers.swift in Sources */,
 				FD3B6D92260EFA64009BCD1B /* NetworkRequest.swift in Sources */,
 				FD3B6EA726116B49009BCD1B /* UIColor+Bridgefy.swift in Sources */,
 				FD3B6E2026101633009BCD1B /* DevicesBuilder.swift in Sources */,
