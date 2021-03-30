@@ -9,7 +9,7 @@ import Foundation
 
 class CountryResource: ApiResource {
     
-    typealias Model = [CountryDetail]
+    typealias Model = CountryDetail
     
     let urlRequest: URLRequest
     
@@ -32,5 +32,16 @@ struct CountryDetail: Decodable {
     let name: String?
     let alpha2Code: String?
     let alpha3Code: String?
+    let callingCodes: [String]?
+    let capital: String?
     let region: String?
+    let subregion: String?
+    let population: Int?
+    let latlng: [Double]?
+    let area: Double?
+    let timezones: [String]?
+    let borders: [String]?
+    let nativeName: String?
+    let currencies: [String]?
+    let languages: [String]?
 }

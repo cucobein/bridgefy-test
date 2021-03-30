@@ -58,17 +58,15 @@ final class CountriesViewModel: ViewModelProtocol {
     }
     
     func onSelectedCountry(row: Int) {
-        if let countryCode = countries[row].country.alpha2Code {
-            router.routeToCountryDetail(dataSource: CountryDetailViewModelDataSource(context: context,
-                                                                                     countryCode: countryCode))
-        }
+        let country = countries[row].country
+        router.routeToCountryDetail(dataSource: CountryDetailViewModelDataSource(context: context,
+                                                                                 country: country))
     }
     
     func onSelectedCountry(section: Int, row: Int) {
-        if let countryCode = groupedCountries[sectionAt: section].items[row].country.alpha2Code {
-            router.routeToCountryDetail(dataSource: CountryDetailViewModelDataSource(context: context,
-                                                                                     countryCode: countryCode))
-        }
+        let country = groupedCountries[sectionAt: section].items[row].country
+        router.routeToCountryDetail(dataSource: CountryDetailViewModelDataSource(context: context,
+                                                                                 country: country))
     }
 }
 

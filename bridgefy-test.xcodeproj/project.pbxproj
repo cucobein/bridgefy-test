@@ -510,6 +510,8 @@
 		FD9FDA1E2612CAED000227F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B6DAB260EFB6E009BCD1B /* XibView.swift */,
+				FD3B6DA5260EFB3A009BCD1B /* RoundCornersView.swift */,
 				FD9FDA1F2612CB06000227F3 /* ClearanceHeaderView.swift */,
 			);
 			path = Views;
@@ -526,8 +528,6 @@
 				FD3B6E7E26115A84009BCD1B /* Buttons */,
 				FD3B6D9F260EFAE7009BCD1B /* Storyboard.swift */,
 				FD3B6DA2260EFB09009BCD1B /* BridgefyNavigationController.swift */,
-				FD3B6DA5260EFB3A009BCD1B /* RoundCornersView.swift */,
-				FD3B6DAB260EFB6E009BCD1B /* XibView.swift */,
 				FD3B6E3C26101AA1009BCD1B /* KeyValueStorage.swift */,
 			);
 			path = Common;

@@ -33,6 +33,7 @@ private extension CountryDetailViewController {
         })
         navigationItem.rightBarButtonItem = .textBarButtonItem(title: "Save", color: .bridgefyRed, tapHandler: {
         })
+        navigationItem.title = viewModel.country.name
         hidesBottomBarWhenPushed = true
     }
     

@@ -16,4 +16,12 @@ extension ApiService {
         let request = ApiRequest(resource: resource)
         perform(request: request, then: handler)
     }
+    
+    typealias GetCountryHandler = (Result<CountryDetail, Error>) -> Void
+
+    func getCountry(countryCode: String, then handler: @escaping GetCountryHandler) {
+        let resource = CountryResource(countryCode: countryCode)
+        let request = ApiRequest(resource: resource)
+        perform(request: request, then: handler)
+    }
 }

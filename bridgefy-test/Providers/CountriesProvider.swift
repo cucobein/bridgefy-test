@@ -26,4 +26,15 @@ class CountriesProvider {
             }
         }
     }
+    
+    func fetchCountry(countryCode: String, completion: @escaping(Result<CountryDetail, Error>) -> Void) {
+        apiService.getCountry(countryCode: countryCode) { result in
+            switch result {
+            case .success(let country):
+                completion(.success(country))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
