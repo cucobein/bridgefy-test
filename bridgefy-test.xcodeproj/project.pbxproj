@@ -96,6 +96,7 @@
 		FD9FDA142611A429000227F3 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD9FDA132611A429000227F3 /* CountryCell.xib */; };
 		FD9FDA172611ADE3000227F3 /* CountryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA162611ADE3000227F3 /* CountryResource.swift */; };
 		FD9FDA1A2611B075000227F3 /* ApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA192611B075000227F3 /* ApplicationDelegate.swift */; };
+		FD9FDA202612CB06000227F3 /* ClearanceHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9FDA1F2612CB06000227F3 /* ClearanceHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -186,6 +187,7 @@
 		FD9FDA132611A429000227F3 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		FD9FDA162611ADE3000227F3 /* CountryResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryResource.swift; sourceTree = "<group>"; };
 		FD9FDA192611B075000227F3 /* ApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDelegate.swift; sourceTree = "<group>"; };
+		FD9FDA1F2612CB06000227F3 /* ClearanceHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearanceHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,9 +507,18 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		FD9FDA1E2612CAED000227F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD9FDA1F2612CB06000227F3 /* ClearanceHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FDB2EA19260EF5E300B8BDE4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FD9FDA1E2612CAED000227F3 /* Views */,
 				FD3B6EA026116943009BCD1B /* Transitions */,
 				FD3B6E8826115B57009BCD1B /* Animations */,
 				FD3B6E8026115A94009BCD1B /* Indicators */,
@@ -683,6 +694,7 @@
 				FD3B6DFE260FED37009BCD1B /* LoginViewModel.swift in Sources */,
 				FD3B6EAB26116BE4009BCD1B /* TabBarViewModel.swift in Sources */,
 				FD9FDA0126119D6A000227F3 /* URLRequest+Helpers.swift in Sources */,
+				FD9FDA202612CB06000227F3 /* ClearanceHeaderView.swift in Sources */,
 				FD3B6DAC260EFB6E009BCD1B /* XibView.swift in Sources */,
 				FD3B6DF2260FECE9009BCD1B /* LoginBuilder.swift in Sources */,
 				FD3B6E1A26101156009BCD1B /* CountryDetailViewController.swift in Sources */,

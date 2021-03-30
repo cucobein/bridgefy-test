@@ -28,7 +28,9 @@ final class CountriesViewModel: ViewModelProtocol {
     private let dataSource: DataSource
     private let countriesProvider: CountriesProvider
     private let router: CountriesRouter
+    private var countriesData = [CountrySummary]()
     let countries = MutableObservableArray<CountryCellDataSource>([])
+    let groupedCountries = MutableObservableArray2D<String, CountryCellDataSource>(Array2D<String, CountryCellDataSource>())
     var groupingState = Observable<CountriesGroupingState>(.ungrouped)
     
     init(dataSource: CountriesViewModelDataSource, router: CountriesRouter) {
@@ -43,8 +45,27 @@ final class CountriesViewModel: ViewModelProtocol {
         groupingState.value = groupingState.value == .grouped ? .ungrouped : .grouped
     }
     
+    func filterCountries(filter: String) {
+        guard !filter.isEmpty else {
+            refreshCountriesDataSource(countryList: countriesData)
+            return
+        }
+        let filteredCountries = countriesData.filter { country -> Bool in
+            guard let countryName = country.name else { return false }
+            return countryName.lowercased().contains(filter.lowercased())
+        }
+        refreshCountriesDataSource(countryList: filteredCountries)
+    }
+    
     func onSelectedCountry(row: Int) {
         if let countryCode = countries[row].country.alpha2Code {
+            router.routeToCountryDetail(dataSource: CountryDetailViewModelDataSource(context: context,
+                                                                                     countryCode: countryCode))
+        }
+    }
+    
+    func onSelectedCountry(section: Int, row: Int) {
+        if let countryCode = groupedCountries[sectionAt: section].items[row].country.alpha2Code {
             router.routeToCountryDetail(dataSource: CountryDetailViewModelDataSource(context: context,
                                                                                      countryCode: countryCode))
         }
@@ -61,13 +82,39 @@ private extension CountriesViewModel {
             switch result {
             case .success(let countries):
                 if let countries = countries {
+                    // Ungrouped data
+                    self.countriesData = countries
                     let countries = countries.map({ country -> CountryCellDataSource in
                         return CountryCellDataSource(context: self.context, country: country)
                     })
                     self.countries.replace(with: countries)
+                    // Grouped data
+                    let sortedCountries = countries.sorted {
+                        ($0.country.region ?? "N/A") < ($1.country.region ?? "N/A")
+                    }
+                    let countriesDictionary = Dictionary(grouping: sortedCountries, by: { (element: CountryCellDataSource) in
+                        element.country.region
+                    })
+                    var countries2DArray = Array2D<String, CountryCellDataSource>()
+                    var index = 0
+                    for (area, countries) in countriesDictionary {
+                        if let area = area, !countries.isEmpty {
+                            countries2DArray.appendSection(area)
+                            for country in countries { countries2DArray.appendItem(country, toSectionAt: index) }
+                            index += 1
+                        }
+                    }
+                    self.groupedCountries.replace(with: countries2DArray)
                 }
             case .failure: ()
             }
         }
+    }
+    
+    private func refreshCountriesDataSource(countryList: [CountrySummary]) {
+        let countries = countryList.map({ country -> CountryCellDataSource in
+            return CountryCellDataSource(context: self.context, country: country)
+        })
+        self.countries.replace(with: countries)
     }
 }
