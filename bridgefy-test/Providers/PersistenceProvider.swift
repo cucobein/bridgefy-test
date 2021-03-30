@@ -94,6 +94,7 @@ class PersistenceProvider {
             }
             try database.write {
                 database.add(country)
+                loadObjects()
             }
         } catch {
             fatalError("Unable to save in database: \(error)")
@@ -107,6 +108,7 @@ class PersistenceProvider {
         do {
             try database.write {
                 database.delete(country)
+                loadObjects()
             }
         } catch {
             fatalError("Unable to save in database: \(error)")
@@ -167,6 +169,7 @@ class PersistenceProvider {
 private extension PersistenceProvider {
     
     func loadObjects() {
+        storedCountries.value = nil
         storedCountries = Observable(Array(database.objects(StoredCountry.self)))
     }
 }
