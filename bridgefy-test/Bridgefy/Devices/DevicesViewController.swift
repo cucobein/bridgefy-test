@@ -46,3 +46,10 @@ private extension DevicesViewController {
         }
     }
 }
+
+extension DevicesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .white
+    }
+}

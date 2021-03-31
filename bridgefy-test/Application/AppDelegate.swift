@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         coordinator.initialize(on: window!)
+        UITableView.appearance().backgroundColor = .white
+        UITableViewCell.appearance().backgroundColor = .white
         return true
     }
 }
