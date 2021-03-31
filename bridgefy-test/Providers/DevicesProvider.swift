@@ -73,7 +73,6 @@ extension DevicesProvider: CBCentralManagerDelegate {
                                      advertisementData: advertisementData,
                                      rssi: RSSI))
             devices.value = newList
-            print(devices.value)
             return
         }
     }
