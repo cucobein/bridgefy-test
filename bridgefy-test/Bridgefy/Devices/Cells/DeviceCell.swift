@@ -23,8 +23,11 @@ final class DeviceCell: UITableViewCell {
     
     func configure(with dataSource: DeviceCellDataSource) {
         self.dataSource = dataSource
-        nameLabel.text = dataSource.device.name
-        advertisementLabel.text = dataSource.device.advertisementData.keys.joined(separator: ", ")
-        rssiLabel.text = "\(dataSource.device.rssi)"
+        nameLabel.text = "Device: \(dataSource.device.name ?? "")"
+        let keysValues = (dataSource.device.advertisementData.compactMap({ (key, value) -> String in
+            return "\(key) -> \(value)"
+        }) as Array).joined(separator: "\n")
+        advertisementLabel.text = keysValues
+        rssiLabel.text = "RSSI: \(dataSource.device.rssi)"
     }
 }

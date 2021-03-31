@@ -30,6 +30,7 @@ class DevicesProvider: NSObject {
     
     func startScan(duration: Double) {
         guard bleStatus.value == .idle else { return }
+        devices.value = []
         centralManager.scanForPeripherals(withServices: nil, options: nil)
         bleStatus.value = .scanning
         DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
