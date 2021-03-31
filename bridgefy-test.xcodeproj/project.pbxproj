@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD370BDF2613FBA200FCD17B /* BLEDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD370BDE2613FBA200FCD17B /* BLEDevice.swift */; };
+		FD370BE42614083400FCD17B /* UISearchBar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD370BE32614083400FCD17B /* UISearchBar+Helpers.swift */; };
 		FD3B6D79260EF8E2009BCD1B /* Bond in Frameworks */ = {isa = PBXBuildFile; productRef = FD3B6D78260EF8E2009BCD1B /* Bond */; };
 		FD3B6D80260EF9A1009BCD1B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6D7F260EF9A1009BCD1B /* AppCoordinator.swift */; };
 		FD3B6D85260EF9EE009BCD1B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6D84260EF9EE009BCD1B /* ApiService.swift */; };
@@ -105,6 +106,7 @@
 
 /* Begin PBXFileReference section */
 		FD370BDE2613FBA200FCD17B /* BLEDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDevice.swift; sourceTree = "<group>"; };
+		FD370BE32614083400FCD17B /* UISearchBar+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Helpers.swift"; sourceTree = "<group>"; };
 		FD3B6D7F260EF9A1009BCD1B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FD3B6D84260EF9EE009BCD1B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		FD3B6D87260EFA1B009BCD1B /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
@@ -213,6 +215,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD370BE12614075500FCD17B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		FD3B6D70260EF7FC009BCD1B /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +338,7 @@
 				FD9FD9FA26118697000227F3 /* UIBarButtonItem+Extensions.swift */,
 				FD9FDA0026119D6A000227F3 /* URLRequest+Helpers.swift */,
 				FD3B6E592610E258009BCD1B /* KeychainHelper.swift */,
+				FD370BE32614083400FCD17B /* UISearchBar+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -362,6 +372,7 @@
 		FD3B6DE1260FEBAF009BCD1B /* Devices */ = {
 			isa = PBXGroup;
 			children = (
+				FD370BE12614075500FCD17B /* Cells */,
 				FD3B6E1F26101633009BCD1B /* DevicesBuilder.swift */,
 				FD3B6E222610163C009BCD1B /* DevicesRouter.swift */,
 				FD3B6E252610164C009BCD1B /* DevicesViewController.storyboard */,
@@ -746,6 +757,7 @@
 				FD3B6D99260EFA96009BCD1B /* HTTPMethod.swift in Sources */,
 				FD3B6E972611680B009BCD1B /* TabBarBuilder.swift in Sources */,
 				FD859BF3260EF33C00DF9F86 /* AppDelegate.swift in Sources */,
+				FD370BE42614083400FCD17B /* UISearchBar+Helpers.swift in Sources */,
 				FD3B6E932611672A009BCD1B /* TabBarRouter.swift in Sources */,
 				FD3B6E8226115AA5009BCD1B /* LoadingViewController.swift in Sources */,
 				FD3B6E0126100F9E009BCD1B /* CountriesBuilder.swift in Sources */,
