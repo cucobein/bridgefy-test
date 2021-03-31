@@ -24,8 +24,10 @@ final class LoginViewModel: ViewModelProtocol {
     private let router: Router
     
     let minHeightNeeded = Observable<CGFloat>(0)
-    let email = Observable<String?>("challenge@bridgefy.me")
-    let password = Observable<String?>("P@$$w0rD!")
+    //let email = Observable<String?>("challenge@bridgefy.me")
+    //let password = Observable<String?>("P@$$w0rD!")
+    let email = Observable<String?>("")
+    let password = Observable<String?>("")
     let showEmailError = Observable<Bool>(false)
     let showPasswordError = Observable<Bool>(false)
     init(dataSource: LoginViewModelDataSource, router: LoginRouter) {

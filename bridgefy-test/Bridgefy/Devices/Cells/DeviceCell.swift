@@ -23,7 +23,7 @@ final class DeviceCell: UITableViewCell {
     
     func configure(with dataSource: DeviceCellDataSource) {
         self.dataSource = dataSource
-        nameLabel.text = "Device: \(dataSource.device.name ?? "")"
+        nameLabel.text = "Device: \(dataSource.device.name ?? "N/A")"
         let keysValues = (dataSource.device.advertisementData.compactMap({ (key, value) -> String in
             return "\(key) -> \(value)"
         }) as Array).joined(separator: "\n")
