@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Bond
+import ReactiveKit
 
 struct DevicesViewModelDataSource: ViewModelDataSourceProtocol {
     
@@ -19,11 +21,28 @@ final class DevicesViewModel: ViewModelProtocol {
     
     private(set) var context: Context
     private let dataSource: DataSource
+    private let devicesProvider: DevicesProvider
     private let router: Router
+    let isScanning = Observable<Bool>(false)
     
     init(dataSource: DevicesViewModelDataSource, router: DevicesRouter) {
         self.context = dataSource.context
         self.dataSource = dataSource
+        self.devicesProvider = dataSource.context.devicesProvider
         self.router = router
+        bind()
+    }
+    
+    func startScan() {
+        devicesProvider.startScan(duration: 30)
+    }
+    
+    func bind() {
+        _ = devicesProvider.bleStatus.observeNext { [weak self] in
+            switch $0 {
+            case .idle: self?.isScanning.value = false
+            case .scanning: self?.isScanning.value = true
+            }
+        }
     }
 }

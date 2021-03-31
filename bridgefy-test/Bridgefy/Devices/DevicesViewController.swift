@@ -28,8 +28,14 @@ final class DevicesViewController: UIViewController, ViewControllerProtocol {
 private extension DevicesViewController {
     
     func configure() {
+        navigationItem.rightBarButtonItem = .textBarButtonItem(title: "Scan", color: .bridgefyRed, tapHandler: {
+            self.viewModel.startScan()
+        })
     }
-    
     func bindViews() {
+        _ = viewModel.isScanning.observeNext { [weak self] in
+            guard let self = self else { return }
+            self.navigationItem.rightBarButtonItem?.title = $0 ? "In progress..." : "Scan"
+        }
     }
 }

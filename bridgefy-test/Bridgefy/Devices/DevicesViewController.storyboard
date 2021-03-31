@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Animosa-Bold.ttf">
+            <string>Animosa-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--BLE-->
         <scene sceneID="KAB-hf-i5Z">
@@ -15,8 +20,27 @@
                     <view key="view" contentMode="scaleToFill" id="BOV-PO-79T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-jz-5Sr">
+                                <rect key="frame" x="16" y="44" width="382" height="38.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsz-uC-xBB">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="38.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Animosa-Bold" family="Animosa" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zX5-zq-2EL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cL4-jz-5Sr" firstAttribute="top" secondItem="zX5-zq-2EL" secondAttribute="top" id="bVz-CA-Nxf"/>
+                            <constraint firstItem="zX5-zq-2EL" firstAttribute="trailing" secondItem="cL4-jz-5Sr" secondAttribute="trailing" constant="16" id="hOw-7b-12v"/>
+                            <constraint firstItem="cL4-jz-5Sr" firstAttribute="leading" secondItem="zX5-zq-2EL" secondAttribute="leading" constant="16" id="uxa-iv-UYf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="BLE" image="BLEOff" selectedImage="BLEOn" id="3gr-CM-bLU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
