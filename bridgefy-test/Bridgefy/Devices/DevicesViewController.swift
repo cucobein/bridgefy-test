@@ -12,6 +12,9 @@ final class DevicesViewController: UIViewController, ViewControllerProtocol {
     
     typealias ViewModel = DevicesViewModel
 
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var indicatorView: UIActivityIndicatorView!
+    
     private var viewModel: DevicesViewModel!
     
     override func viewDidLoad() {
@@ -35,6 +38,7 @@ private extension DevicesViewController {
     func bindViews() {
         _ = viewModel.isScanning.observeNext { [weak self] in
             guard let self = self else { return }
+            $0 ? self.indicatorView.startAnimating() : self.indicatorView.stopAnimating()
             self.navigationItem.rightBarButtonItem?.title = $0 ? "In progress..." : "Scan"
         }
     }

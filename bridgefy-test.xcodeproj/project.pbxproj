@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FD370BDF2613FBA200FCD17B /* BLEDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD370BDE2613FBA200FCD17B /* BLEDevice.swift */; };
 		FD370BE42614083400FCD17B /* UISearchBar+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD370BE32614083400FCD17B /* UISearchBar+Helpers.swift */; };
+		FD370BE726140B2A00FCD17B /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD370BE626140B2A00FCD17B /* DeviceCell.swift */; };
+		FD370BEE26140BDF00FCD17B /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD370BED26140BDF00FCD17B /* DeviceCell.xib */; };
 		FD3B6D79260EF8E2009BCD1B /* Bond in Frameworks */ = {isa = PBXBuildFile; productRef = FD3B6D78260EF8E2009BCD1B /* Bond */; };
 		FD3B6D80260EF9A1009BCD1B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6D7F260EF9A1009BCD1B /* AppCoordinator.swift */; };
 		FD3B6D85260EF9EE009BCD1B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B6D84260EF9EE009BCD1B /* ApiService.swift */; };
@@ -107,6 +109,8 @@
 /* Begin PBXFileReference section */
 		FD370BDE2613FBA200FCD17B /* BLEDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDevice.swift; sourceTree = "<group>"; };
 		FD370BE32614083400FCD17B /* UISearchBar+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Helpers.swift"; sourceTree = "<group>"; };
+		FD370BE626140B2A00FCD17B /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		FD370BED26140BDF00FCD17B /* DeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
 		FD3B6D7F260EF9A1009BCD1B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FD3B6D84260EF9EE009BCD1B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		FD3B6D87260EFA1B009BCD1B /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
@@ -218,6 +222,8 @@
 		FD370BE12614075500FCD17B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FD370BE626140B2A00FCD17B /* DeviceCell.swift */,
+				FD370BED26140BDF00FCD17B /* DeviceCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -644,6 +650,7 @@
 				FD3B6E502610DBBF009BCD1B /* LaunchScreen.storyboard in Resources */,
 				FD3B6E642610F261009BCD1B /* InputRow.xib in Resources */,
 				FD3B6DE8260FEC26009BCD1B /* Animosa-ExtraBold.ttf in Resources */,
+				FD370BEE26140BDF00FCD17B /* DeviceCell.xib in Resources */,
 				FD3B6DEB260FEC26009BCD1B /* Animosa-ExtraLight.ttf in Resources */,
 				FD3B6E0726100FB5009BCD1B /* CountriesViewController.storyboard in Resources */,
 				FD3B6DE9260FEC26009BCD1B /* Animosa-Regular.ttf in Resources */,
@@ -706,6 +713,7 @@
 				FD3B6E782611598D009BCD1B /* String+Helpers.swift in Sources */,
 				FD3B6D92260EFA64009BCD1B /* NetworkRequest.swift in Sources */,
 				FD3B6EA726116B49009BCD1B /* UIColor+Bridgefy.swift in Sources */,
+				FD370BE726140B2A00FCD17B /* DeviceCell.swift in Sources */,
 				FD3B6E2026101633009BCD1B /* DevicesBuilder.swift in Sources */,
 				FD3B6DA0260EFAE7009BCD1B /* Storyboard.swift in Sources */,
 				FD3B6DC4260F00A8009BCD1B /* ViewModelDataSource.swift in Sources */,

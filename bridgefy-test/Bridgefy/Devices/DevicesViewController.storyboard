@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,29 +22,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-jz-5Sr">
-                                <rect key="frame" x="16" y="44" width="382" height="38.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-jz-5Sr">
+                                <rect key="frame" x="16" y="44" width="382" height="66.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsz-uC-xBB">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="239.5" height="66.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Animosa-Bold" family="Animosa" pointSize="32"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="UUW-lY-jhz">
+                                        <rect key="frame" x="247.5" y="0.0" width="134.5" height="66.5"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="134.5" id="7mC-J4-YnF"/>
+                                            <constraint firstAttribute="height" constant="66.5" id="8kS-Pj-kg7"/>
+                                        </constraints>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6vo-V7-3cW">
+                                <rect key="frame" x="16" y="118.5" width="382" height="686.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zX5-zq-2EL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cL4-jz-5Sr" firstAttribute="top" secondItem="zX5-zq-2EL" secondAttribute="top" id="bVz-CA-Nxf"/>
+                            <constraint firstItem="cL4-jz-5Sr" firstAttribute="top" secondItem="zX5-zq-2EL" secondAttribute="top" id="1nq-Oa-rER"/>
+                            <constraint firstItem="6vo-V7-3cW" firstAttribute="top" secondItem="cL4-jz-5Sr" secondAttribute="bottom" constant="8" id="U7A-nQ-wXG"/>
+                            <constraint firstItem="zX5-zq-2EL" firstAttribute="trailing" secondItem="6vo-V7-3cW" secondAttribute="trailing" constant="16" id="Yts-8I-dhC"/>
+                            <constraint firstItem="zX5-zq-2EL" firstAttribute="bottom" secondItem="6vo-V7-3cW" secondAttribute="bottom" constant="8" id="dWs-66-XA1"/>
                             <constraint firstItem="zX5-zq-2EL" firstAttribute="trailing" secondItem="cL4-jz-5Sr" secondAttribute="trailing" constant="16" id="hOw-7b-12v"/>
+                            <constraint firstItem="6vo-V7-3cW" firstAttribute="leading" secondItem="zX5-zq-2EL" secondAttribute="leading" constant="16" id="kZ9-do-tMG"/>
                             <constraint firstItem="cL4-jz-5Sr" firstAttribute="leading" secondItem="zX5-zq-2EL" secondAttribute="leading" constant="16" id="uxa-iv-UYf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="BLE" image="BLEOff" selectedImage="BLEOn" id="3gr-CM-bLU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="indicatorView" destination="UUW-lY-jhz" id="a9T-NR-x3T"/>
+                        <outlet property="tableView" destination="6vo-V7-3cW" id="IpA-jz-BIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJh-H9-ymu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,5 +75,8 @@
     <resources>
         <image name="BLEOff" width="31" height="31"/>
         <image name="BLEOn" width="31" height="31"/>
+        <namedColor name="AccentColor">
+            <color red="0.92941176470588238" green="0.36078431372549019" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
