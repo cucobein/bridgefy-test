@@ -54,7 +54,6 @@ private extension CountryDetailViewController {
                 self.viewModel.toggleStorageState()
             }))
             refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
-                print("Handle Cancel Logic here")
             }))
             self.present(refreshAlert, animated: true, completion: nil)
         })
