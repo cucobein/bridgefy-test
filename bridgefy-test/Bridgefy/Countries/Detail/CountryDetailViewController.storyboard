@@ -106,7 +106,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="KOJ-hc-F1S" secondAttribute="bottom" id="lUg-HB-brU"/>
                                                     <constraint firstItem="KOJ-hc-F1S" firstAttribute="top" secondItem="BKk-Dq-8AM" secondAttribute="top" id="mM0-4C-jWq"/>
@@ -198,7 +198,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="rbg-YF-JDd" firstAttribute="leading" secondItem="11T-up-6TD" secondAttribute="leading" constant="8" id="CC8-FV-GY9"/>
                                                             <constraint firstAttribute="trailing" secondItem="rbg-YF-JDd" secondAttribute="trailing" constant="8" id="W8t-5k-cz7"/>
@@ -251,7 +251,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="96M-a5-wQL" firstAttribute="top" secondItem="Eja-0Q-uuz" secondAttribute="top" id="KHZ-ob-R55"/>
                                                             <constraint firstItem="96M-a5-wQL" firstAttribute="leading" secondItem="Eja-0Q-uuz" secondAttribute="leading" constant="8" id="VeH-qc-Mu9"/>
@@ -310,7 +310,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="J51-21-ipy"/>
                                                     <constraint firstItem="ecc-Rv-gK2" firstAttribute="top" secondItem="sKO-6V-QYe" secondAttribute="top" constant="8" id="h0e-mb-WTu"/>
@@ -379,7 +379,7 @@
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="Ydu-mM-8FP" secondAttribute="bottom" constant="8" id="7HC-id-utB"/>
                                                     <constraint firstItem="Ydu-mM-8FP" firstAttribute="leading" secondItem="D69-Cx-MIx" secondAttribute="leading" constant="8" id="Awm-qj-d5P"/>
@@ -406,7 +406,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="7Nx-w6-fWh" firstAttribute="leading" secondItem="wHn-tn-Okk" secondAttribute="leading" constant="16" id="55i-LD-BLX"/>
                                             <constraint firstItem="D69-Cx-MIx" firstAttribute="top" secondItem="sKO-6V-QYe" secondAttribute="bottom" constant="16" id="BFl-ws-z6o"/>
@@ -431,6 +431,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="wHn-tn-Okk" secondAttribute="bottom" id="QEI-la-31x"/>
                                     <constraint firstItem="wHn-tn-Okk" firstAttribute="leading" secondItem="oxw-l4-XGV" secondAttribute="leading" id="lGz-6z-bNI"/>
