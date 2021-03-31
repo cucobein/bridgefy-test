@@ -16,12 +16,15 @@ struct DeviceCellDataSource: ViewModelDataSourceProtocol {
 
 final class DeviceCell: UITableViewCell {
     
-    @IBOutlet private weak var nameLabel: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var advertisementLabel: UILabel!
     @IBOutlet private weak var rssiLabel: UILabel!
     private var dataSource: DeviceCellDataSource!
     
     func configure(with dataSource: DeviceCellDataSource) {
         self.dataSource = dataSource
+        nameLabel.text = dataSource.device.name
+        advertisementLabel.text = dataSource.device.advertisementData.keys.joined(separator: ", ")
+        rssiLabel.text = "\(dataSource.device.rssi)"
     }
 }

@@ -24,6 +24,7 @@ final class DevicesViewModel: ViewModelProtocol {
     private let devicesProvider: DevicesProvider
     private let router: Router
     let isScanning = Observable<Bool>(false)
+    let devices = Observable<[DeviceCellDataSource]>([])
     
     init(dataSource: DevicesViewModelDataSource, router: DevicesRouter) {
         self.context = dataSource.context
@@ -42,6 +43,11 @@ final class DevicesViewModel: ViewModelProtocol {
             switch $0 {
             case .idle: self?.isScanning.value = false
             case .scanning: self?.isScanning.value = true
+            }
+        }
+        _ = devicesProvider.devices.observeNext { devs in
+            self.devices.value = devs.map { device -> DeviceCellDataSource in
+                return DeviceCellDataSource(context: self.context, device: device)
             }
         }
     }

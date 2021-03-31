@@ -41,5 +41,8 @@ private extension DevicesViewController {
             $0 ? self.indicatorView.startAnimating() : self.indicatorView.stopAnimating()
             self.navigationItem.rightBarButtonItem?.title = $0 ? "In progress..." : "Scan"
         }
+        viewModel.devices.bind(to: tableView, cellType: DeviceCell.self) {
+            $0.configure(with: $1)
+        }
     }
 }
